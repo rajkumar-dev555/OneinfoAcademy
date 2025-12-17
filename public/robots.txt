@@ -1,0 +1,16 @@
+# robots.txt for OneinfoAcademy
+# https://oneinfoacademy.com
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin paths (if any)
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://oneinfoacademy.com/sitemap.xml
+
+# Crawl delay (be polite to the server)
+Crawl-delay: 1
