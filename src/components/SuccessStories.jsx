@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import Counter from './Counter';
 
@@ -7,6 +7,7 @@ const SuccessStories = () => {
     const [statsRef, statsAnim] = useScrollAnimation();
     const [storiesRef, storiesAnim] = useScrollAnimation();
     const [activePage, setActivePage] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
     const stats = [
         { label: 'Students Placed', value: 500, suffix: '+' },
@@ -17,46 +18,78 @@ const SuccessStories = () => {
 
     const stories = [
         {
-            name: 'Priya Sharma',
-            role: 'Data Scientist at TechGliders',
-            image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-            quote: "Kodopetiya's Data Science bootcamp was a game changer. The hands-on projects gave me the confidence to crack my dream job interview.",
+            name: 'Nikitha',
+            role: 'Cybersecurity Student',
+            quote: "I learned a lot through his guidance during the cybersecurity course. Vignesh Kumar doesn’t just teach concepts, he explains them in a way that really stays in your mind, using real-time examples.",
         },
         {
-            name: 'Rohan Mehta',
-            role: 'Full Stack Developer at InnovateX',
-            image: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-            quote: "The curriculum is updated with the latest tech stack. I went from knowing zero coding to building full-scale web apps in 6 months.",
+            name: 'Priya Sharma',
+            role: 'Data Science Graduate',
+            quote: "OneinfoAcademy's Data Science bootcamp was a game changer. The hands-on projects gave me the confidence to crack my dream job interview.",
         },
         {
             name: 'Anjali Gupta',
-            role: 'UI/UX Designer at CreativeMinds',
-            image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
+            role: 'UI/UX Design Graduate',
             quote: "The design mentorship was exceptional. I learned not just tools, but design thinking which is crucial for the industry.",
         },
-        // New Data for Carousel
+        {
+            name: 'Dharshini Sri',
+            role: 'cybersecurity and Blockchain internship',
+            quote: "I am extremely grateful for the guidance and support I received during my final year project on Blockchain. His patience and dedication made complex concepts much easier to grasp.",
+        },
+        {
+            name: 'Yuvasri',
+            role: 'Full Stack Student',
+            quote: "You understand the students mindset and always come down to our level to teach us for better understanding. You have never disappointed us.",
+        },
         {
             name: 'Vikram Singh',
-            role: 'Cloud Engineer at SkyHigh Stats',
-            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
+            role: 'Cloud Computing Student',
             quote: "The AWS training module is world-class. I cleared my certification on the first attempt and got placed within a week!",
         },
         {
             name: 'Sneha Patel',
-            role: 'Frontend Dev at WebWizards',
-            image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-            quote: "I loved the flexible learning schedule. It allowed me to switch careers from marketing to coding without quitting my job.",
+            role: 'Digital Marketing Student',
+            quote: "The SEO and Digital Marketing strategies taught here are top-notch. I saw immediate results in my freelance projects during the course itself.",
         },
         {
             name: 'Arjun Das',
-            role: 'Product Manager at BuildIt',
-            image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-            quote: "Understanding the tech side of things helped me transition from sales to Product Management. Highly recommended!",
+            role: 'AI & Machine Learning Student',
+            quote: "The deep dive into ML algorithms and practical applications was eye-opening. The course is perfectly balanced between theory and practice.",
+        },
+        {
+            name: 'Divya K',
+            role: 'Graphic Design Professional',
+            quote: "I transitioned from a traditional artist to a digital designer. OneinfoAcademy's curriculum is perfectly aligned with modern industry standards.",
+        },
+        {
+            name: 'Suresh R',
+            role: 'Embedded Systems Student',
+            quote: "Hardware and software integration was always a mystery to me until I joined this course. The IoT projects were particularly engaging.",
+        },
+        {
+            name: 'Chitrikaaaa M',
+            role: 'Networking Student',
+            quote: "My project, 'Network Traffic Analysis using Bettercap,' was explained in a very clear manner. I was able to understand complex network protocols easily.",
+        },
+        {
+            name: 'Prashanthy',
+            role: 'Software Testing Student',
+            quote: "The manual and automated testing modules gave me a solid foundation. The hands-on approach made bug tracking and reporting very simple.",
         }
     ];
 
     const ITEMS_PER_PAGE = 3;
     const totalPages = Math.ceil(stories.length / ITEMS_PER_PAGE);
+
+    useEffect(() => {
+        if (!isPaused) {
+            const interval = setInterval(() => {
+                setActivePage((prev) => (prev + 1) % totalPages);
+            }, 5000); // Auto-scroll every 5 seconds
+            return () => clearInterval(interval);
+        }
+    }, [isPaused, totalPages]);
 
     const handleNext = () => {
         setActivePage((prev) => (prev + 1) % totalPages);
@@ -72,8 +105,27 @@ const SuccessStories = () => {
         (activePage + 1) * ITEMS_PER_PAGE
     );
 
+    // Helper to get initials
+    const getInitials = (name) => {
+        return name.charAt(0).toUpperCase();
+    };
+
+    // Helper to get random but consistent background color based on name
+    const getAvatarColor = (name) => {
+        const colors = [
+            'bg-blue-500', 'bg-green-500', 'bg-purple-500',
+            'bg-pink-500', 'bg-indigo-500', 'bg-teal-500',
+            'bg-orange-500', 'bg-red-500'
+        ];
+        let hash = 0;
+        for (let i = 0; i < name.length; i++) {
+            hash = name.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        return colors[Math.abs(hash) % colors.length];
+    };
+
     return (
-        <section id="testimonials" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <section id="testimonials" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
             <div className="container mx-auto px-4">
                 {/* Stats Section */}
                 <div ref={statsRef} className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 ${statsAnim}`}>
@@ -93,12 +145,16 @@ const SuccessStories = () => {
                         Testimonials
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                        Real people, real results. Hear from our alumni who transformed their careers.
+                        Real people, real results. Hear from our students who transformed their careers.
                     </p>
                 </div>
 
                 {/* Carousel */}
-                <div className="relative max-w-6xl mx-auto">
+                <div
+                    className="relative max-w-6xl mx-auto"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
+                >
                     {/* Left Arrow */}
                     <button
                         onClick={handlePrev}
@@ -116,7 +172,9 @@ const SuccessStories = () => {
                             {currentStories.map((story, index) => (
                                 <div key={index} className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 hover:-translate-y-2 transition-transform duration-500 flex flex-col h-full transform animate-slide-up-fade" style={{ animationDelay: `${index * 150}ms` }}>
                                     <div className="flex items-center gap-4 mb-6">
-                                        <img src={story.image} alt={story.name} className="w-16 h-16 rounded-full object-cover border-2 border-primary dark:border-blue-500" />
+                                        <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold border-2 border-primary dark:border-blue-500 ${getAvatarColor(story.name)}`}>
+                                            {getInitials(story.name)}
+                                        </div>
                                         <div>
                                             <h3 className="font-bold text-lg text-dark dark:text-white">{story.name}</h3>
                                             <p className="text-sm text-secondary dark:text-blue-400">{story.role}</p>
