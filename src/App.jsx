@@ -7,6 +7,7 @@ import PlacementSupport from './components/PlacementSupport';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import WhatsAppWidget from './components/WhatsAppWidget';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       </main>
       <Footer />
       <ScrollToTop />
+      <WhatsAppWidget />
     </div>
   );
 }

@@ -20,63 +20,80 @@ const SuccessStories = () => {
         {
             name: 'Nikitha',
             role: 'Cybersecurity Student',
+            image: 'https://randomuser.me/api/portraits/women/1.jpg',
             quote: "I learned a lot through his guidance during the cybersecurity course. Vignesh Kumar doesn’t just teach concepts, he explains them in a way that really stays in your mind, using real-time examples.",
         },
         {
             name: 'Priya Sharma',
             role: 'Data Science Graduate',
+            image: 'https://randomuser.me/api/portraits/women/2.jpg',
             quote: "OneinfoAcademy's Data Science bootcamp was a game changer. The hands-on projects gave me the confidence to crack my dream job interview.",
         },
         {
             name: 'Anjali Gupta',
             role: 'UI/UX Design Graduate',
+            image: 'https://randomuser.me/api/portraits/women/3.jpg',
             quote: "The design mentorship was exceptional. I learned not just tools, but design thinking which is crucial for the industry.",
         },
         {
             name: 'Dharshini Sri',
             role: 'cybersecurity and Blockchain internship',
+            image: 'https://randomuser.me/api/portraits/women/4.jpg',
             quote: "I am extremely grateful for the guidance and support I received during my final year project on Blockchain. His patience and dedication made complex concepts much easier to grasp.",
         },
         {
             name: 'Yuvasri',
             role: 'Full Stack Student',
+            image: 'https://randomuser.me/api/portraits/women/5.jpg',
             quote: "You understand the students mindset and always come down to our level to teach us for better understanding. You have never disappointed us.",
         },
         {
             name: 'Vikram Singh',
             role: 'Cloud Computing Student',
+            image: 'https://randomuser.me/api/portraits/men/1.jpg',
             quote: "The AWS training module is world-class. I cleared my certification on the first attempt and got placed within a week!",
         },
         {
             name: 'Sneha Patel',
             role: 'Digital Marketing Student',
+            image: 'https://randomuser.me/api/portraits/women/6.jpg',
             quote: "The SEO and Digital Marketing strategies taught here are top-notch. I saw immediate results in my freelance projects during the course itself.",
         },
         {
             name: 'Arjun Das',
             role: 'AI & Machine Learning Student',
+            image: 'https://randomuser.me/api/portraits/men/2.jpg',
             quote: "The deep dive into ML algorithms and practical applications was eye-opening. The course is perfectly balanced between theory and practice.",
         },
         {
             name: 'Divya K',
             role: 'Graphic Design Professional',
+            image: 'https://randomuser.me/api/portraits/women/7.jpg',
             quote: "I transitioned from a traditional artist to a digital designer. OneinfoAcademy's curriculum is perfectly aligned with modern industry standards.",
         },
         {
             name: 'Suresh R',
             role: 'Embedded Systems Student',
+            image: 'https://randomuser.me/api/portraits/men/3.jpg',
             quote: "Hardware and software integration was always a mystery to me until I joined this course. The IoT projects were particularly engaging.",
         },
         {
             name: 'Chitrikaaaa M',
             role: 'Networking Student',
+            image: 'https://randomuser.me/api/portraits/women/8.jpg',
             quote: "My project, 'Network Traffic Analysis using Bettercap,' was explained in a very clear manner. I was able to understand complex network protocols easily.",
         },
         {
             name: 'Prashanthy',
             role: 'Software Testing Student',
+            image: 'https://randomuser.me/api/portraits/women/9.jpg',
             quote: "The manual and automated testing modules gave me a solid foundation. The hands-on approach made bug tracking and reporting very simple.",
         }
+        // {
+        //     name: 'Ram Kumar',
+        //     role: 'Cloud & Security Student',
+        //     quote: "He was an excellent mentor who played a vital role in helping me develop a clear and strong understanding of cloud computing and security fundamentals. His teaching style is patient, practical, and highly engaging, which made even complex concepts easy to grasp. He always took the time to ensure that every topic was thoroughly understood, encouraging questions and providing real-world examples that enhanced my learning experience. His guidance not only improved my technical knowledge but also boosted my confidence in applying these concepts effectively. I am truly grateful for his support, dedication and the valuable skills I gained under his mentorship.",
+        // }
     ];
 
     const ITEMS_PER_PAGE = 3;
@@ -105,24 +122,7 @@ const SuccessStories = () => {
         (activePage + 1) * ITEMS_PER_PAGE
     );
 
-    // Helper to get initials
-    const getInitials = (name) => {
-        return name.charAt(0).toUpperCase();
-    };
 
-    // Helper to get random but consistent background color based on name
-    const getAvatarColor = (name) => {
-        const colors = [
-            'bg-blue-500', 'bg-green-500', 'bg-purple-500',
-            'bg-pink-500', 'bg-indigo-500', 'bg-teal-500',
-            'bg-orange-500', 'bg-red-500'
-        ];
-        let hash = 0;
-        for (let i = 0; i < name.length; i++) {
-            hash = name.charCodeAt(i) + ((hash << 5) - hash);
-        }
-        return colors[Math.abs(hash) % colors.length];
-    };
 
     return (
         <section id="testimonials" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
@@ -172,8 +172,12 @@ const SuccessStories = () => {
                             {currentStories.map((story, index) => (
                                 <div key={index} className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 hover:-translate-y-2 transition-transform duration-500 flex flex-col h-full transform animate-slide-up-fade" style={{ animationDelay: `${index * 150}ms` }}>
                                     <div className="flex items-center gap-4 mb-6">
-                                        <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold border-2 border-primary dark:border-blue-500 ${getAvatarColor(story.name)}`}>
-                                            {getInitials(story.name)}
+                                        <div className={`w-16 h-16 rounded-full flex-shrink-0 overflow-hidden border-2 border-primary dark:border-blue-500`}>
+                                            <img
+                                                src={story.image}
+                                                alt={story.name}
+                                                className="w-full h-full object-cover"
+                                            />
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-lg text-dark dark:text-white">{story.name}</h3>

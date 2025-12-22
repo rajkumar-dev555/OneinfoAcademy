@@ -21,6 +21,7 @@ export default {
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out forwards',
         'slide-up': 'slideUp 0.5s ease-out forwards',
+        'bounce-slow': 'bounce 3s infinite',
       },
       keyframes: {
         fadeIn: {

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import useDarkMode from '../hooks/useDarkMode';
 
+import logo from '../assets/images/header-logo.png';
+
 const Navbar = () => {
     const [colorTheme, setTheme] = useDarkMode();
     const [isOpen, setIsOpen] = useState(false);
@@ -11,12 +13,10 @@ const Navbar = () => {
                 <div className="flex justify-between h-16 items-center">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center cursor-pointer">
-                        <h1 className="text-2xl font-heading font-bold text-primary dark:text-secondary tracking-tighter">
-                            Oneinfo<span className="text-accent">Academy</span>
-                        </h1>
+                        <img src={logo} alt="OneinfoAcademy Logo" className="h-12 w-auto object-contain" />
                     </div>
 
-                    {/* Desktop Menu */} 
+                    {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-8">
                         {['Home', 'Programs', 'Testimonials', 'Placement', 'Contact'].map((item) => (
                             <a

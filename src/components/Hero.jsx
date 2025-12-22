@@ -48,28 +48,28 @@ const Hero = () => {
                                 alt="Students learning"
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                             />
+                        </div>
 
-                            {/* Floating Qualification Card */}
-                            <div className="absolute -bottom-6 -left-6 md:bottom-8 md:-left-8 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 animate-bounce" style={{ animationDuration: '3s' }}>
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-green-100 dark:bg-green-900/50 rounded-full text-green-600">
-                                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <p className="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase">Placement</p>
-                                        <p className="text-lg font-bold text-dark dark:text-white">100% Success</p>
-                                    </div>
+                        {/* Floating Qualification Card */}
+                        <div className="absolute -bottom-6 -left-6 md:bottom-8 md:-left-8 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 animate-bounce z-20" style={{ animationDuration: '3s' }}>
+                            <div className="flex items-center gap-3">
+                                <div className="p-2 bg-green-100 dark:bg-green-900/50 rounded-full text-green-600">
+                                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p className="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase">Placement</p>
+                                    <p className="text-lg font-bold text-dark dark:text-white">100% Success</p>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        {/* Decorative Background Elements */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10">
-                            <div className="absolute top-0 right-0 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-blob"></div>
-                            <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-2000"></div>
-                        </div>
+                    {/* Decorative Background Elements */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10">
+                        <div className="absolute top-0 right-0 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-blob"></div>
+                        <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-2000"></div>
                     </div>
                 </div>
             </div>
