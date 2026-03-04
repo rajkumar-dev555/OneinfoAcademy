@@ -45,7 +45,7 @@ const PlacementSupport = () => {
                             Your Career, Our <span className="text-accent">Priority</span>
                         </h2>
                         <p className="text-lg text-blue-100 mb-8 leading-relaxed">
-                            We don't just teach technology; we launch careers. Our dedicated placement cell works tirelessly to ensure you land your dream job.
+                            We don't just teach technology; we launch careers. We provide 100% Job Assistance to ensure you land your dream job in the IT industry.
                         </p>
                         <div className="space-y-6">
                             {steps.map((step, index) => (

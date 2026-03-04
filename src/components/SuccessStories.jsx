@@ -20,73 +20,73 @@ const SuccessStories = () => {
         {
             name: 'Nikitha',
             role: 'Cybersecurity Student',
-            image: 'https://randomuser.me/api/portraits/women/1.jpg',
+            image: '/assets/images/testimonials/student1.png',
             quote: "I learned a lot through his guidance during the cybersecurity course. Vignesh Kumar doesn’t just teach concepts, he explains them in a way that really stays in your mind, using real-time examples.",
         },
         {
             name: 'Priya Sharma',
             role: 'Data Science Graduate',
-            image: 'https://randomuser.me/api/portraits/women/2.jpg',
+            image: '/assets/images/testimonials/student2.png',
             quote: "OneinfoAcademy's Data Science bootcamp was a game changer. The hands-on projects gave me the confidence to crack my dream job interview.",
         },
         {
             name: 'Anjali Gupta',
             role: 'UI/UX Design Graduate',
-            image: 'https://randomuser.me/api/portraits/women/3.jpg',
+            image: '/assets/images/testimonials/student3.png',
             quote: "The design mentorship was exceptional. I learned not just tools, but design thinking which is crucial for the industry.",
         },
         {
             name: 'Dharshini Sri',
             role: 'cybersecurity and Blockchain internship',
-            image: 'https://randomuser.me/api/portraits/women/4.jpg',
+            image: '/assets/images/testimonials/student4.png',
             quote: "I am extremely grateful for the guidance and support I received during my final year project on Blockchain. His patience and dedication made complex concepts much easier to grasp.",
         },
         {
             name: 'Yuvasri',
             role: 'Full Stack Student',
-            image: 'https://randomuser.me/api/portraits/women/5.jpg',
+            image: '/assets/images/testimonials/student1.png',
             quote: "You understand the students mindset and always come down to our level to teach us for better understanding. You have never disappointed us.",
         },
         {
             name: 'Vikram Singh',
             role: 'Cloud Computing Student',
-            image: 'https://randomuser.me/api/portraits/men/1.jpg',
+            image: '/assets/images/testimonials/student_male1.png',
             quote: "The AWS training module is world-class. I cleared my certification on the first attempt and got placed within a week!",
         },
         {
             name: 'Sneha Patel',
             role: 'Digital Marketing Student',
-            image: 'https://randomuser.me/api/portraits/women/6.jpg',
+            image: '/assets/images/testimonials/student2.png',
             quote: "The SEO and Digital Marketing strategies taught here are top-notch. I saw immediate results in my freelance projects during the course itself.",
         },
         {
             name: 'Arjun Das',
             role: 'AI & Machine Learning Student',
-            image: 'https://randomuser.me/api/portraits/men/2.jpg',
+            image: '/assets/images/testimonials/student_male2.png',
             quote: "The deep dive into ML algorithms and practical applications was eye-opening. The course is perfectly balanced between theory and practice.",
         },
         {
             name: 'Divya K',
             role: 'Graphic Design Professional',
-            image: 'https://randomuser.me/api/portraits/women/7.jpg',
+            image: '/assets/images/testimonials/student3.png',
             quote: "I transitioned from a traditional artist to a digital designer. OneinfoAcademy's curriculum is perfectly aligned with modern industry standards.",
         },
         {
             name: 'Suresh R',
             role: 'Embedded Systems Student',
-            image: 'https://randomuser.me/api/portraits/men/3.jpg',
+            image: '/assets/images/testimonials/student_male3.png',
             quote: "Hardware and software integration was always a mystery to me until I joined this course. The IoT projects were particularly engaging.",
         },
         {
             name: 'Chitrikaaaa M',
             role: 'Networking Student',
-            image: 'https://randomuser.me/api/portraits/women/8.jpg',
+            image: '/assets/images/testimonials/student4.png',
             quote: "My project, 'Network Traffic Analysis using Bettercap,' was explained in a very clear manner. I was able to understand complex network protocols easily.",
         },
         {
             name: 'Prashanthy',
             role: 'Software Testing Student',
-            image: 'https://randomuser.me/api/portraits/women/9.jpg',
+            image: '/assets/images/testimonials/student1.png',
             quote: "The manual and automated testing modules gave me a solid foundation. The hands-on approach made bug tracking and reporting very simple.",
         }
         // {
@@ -177,6 +177,8 @@ const SuccessStories = () => {
                                                 src={story.image}
                                                 alt={story.name}
                                                 className="w-full h-full object-cover"
+                                                loading="lazy"
+                                                decoding="async"
                                             />
                                         </div>
                                         <div>

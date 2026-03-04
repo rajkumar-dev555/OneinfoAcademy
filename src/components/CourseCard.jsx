@@ -8,6 +8,8 @@ const CourseCard = ({ title, category, image, duration, level, onClick }) => {
                     src={image}
                     alt={title}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
                 />
             </div>
             <div className="p-6">

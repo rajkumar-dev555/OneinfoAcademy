@@ -47,6 +47,8 @@ const Hero = () => {
                                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
                                 alt="Students learning"
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                                fetchpriority="high"
+                                decoding="async"
                             />
                         </div>
 

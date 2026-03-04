@@ -13,7 +13,7 @@ const Navbar = () => {
                 <div className="flex justify-between h-16 items-center">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center cursor-pointer">
-                        <img src={logo} alt="OneinfoAcademy Logo" className="h-12 w-auto object-contain" />
+                        <img src={logo} alt="OneinfoAcademy Logo" className="h-12 w-auto object-contain" fetchpriority="high" decoding="async" />
                     </div>
 
                     {/* Desktop Menu */}

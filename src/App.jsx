@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import SuccessStories from './components/SuccessStories';
-import Programs from './components/Programs';
-import PlacementSupport from './components/PlacementSupport';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import WhatsAppWidget from './components/WhatsAppWidget';
+
+// Lazy load components that are below the fold
+const SuccessStories = lazy(() => import('./components/SuccessStories'));
+const Programs = lazy(() => import('./components/Programs'));
+const PlacementSupport = lazy(() => import('./components/PlacementSupport'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
+const ScrollToTop = lazy(() => import('./components/ScrollToTop'));
+const WhatsAppWidget = lazy(() => import('./components/WhatsAppWidget'));
+
+// Loading fallback
+const LoadingSection = () => (
+  <div className="py-20 flex justify-center items-center">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-secondary"></div>
+  </div>
+);
 
 function App() {
   return (
@@ -15,14 +24,18 @@ function App() {
       <Navbar />
       <Hero />
       <main>
-        <SuccessStories />
-        <Programs />
-        <PlacementSupport />
-        <Contact />
+        <Suspense fallback={<LoadingSection />}>
+          <SuccessStories />
+          <Programs />
+          <PlacementSupport />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
-      <ScrollToTop />
-      <WhatsAppWidget />
+      <Suspense fallback={null}>
+        <Footer />
+        <ScrollToTop />
+        <WhatsAppWidget />
+      </Suspense>
     </div>
   );
 }
