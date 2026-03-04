@@ -8,11 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1a365d', // Deep Blue
-        secondary: '#2563eb', // Bright Blue
-        accent: '#f59e0b', // Amber
-        dark: '#0f172a', // Slate 900
-        light: '#f8fafc', // Slate 50
+        primary: '#1d293e', // Logo Navy
+        secondary: '#f39200', // Logo Orange
+        accent: '#f39200', // Use orange as accent too
+        dark: '#0f172a',
+        light: '#f8fafc',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

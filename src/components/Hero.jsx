@@ -1,77 +1,141 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Hero = () => {
+    const [displayText, setDisplayText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+    const [ref, animationClass] = useScrollAnimation();
+
+    const domains = [
+        'AI & Applied AI',
+        'Full Stack Development',
+        'Cyber Security',
+        'DevOps & Cloud',
+        'Data Science',
+        'UI/UX Design',
+        'Digital Marketing',
+        'Software Testing',
+        'Networking',
+        'Embedded Systems & IoT'
+    ];
+
+    useEffect(() => {
+        let timer = setTimeout(() => {
+            handleType();
+        }, typingSpeed);
+
+        return () => clearTimeout(timer);
+    }, [displayText, isDeleting, loopNum]);
+
+    const handleType = () => {
+        const i = loopNum % domains.length;
+        const fullText = domains[i];
+
+        setDisplayText(
+            isDeleting
+                ? fullText.substring(0, displayText.length - 1)
+                : fullText.substring(0, displayText.length + 1)
+        );
+
+        setTypingSpeed(isDeleting ? 75 : 150);
+
+        if (!isDeleting && displayText === fullText) {
+            setTimeout(() => setIsDeleting(true), 1500);
+        } else if (isDeleting && displayText === '') {
+            setIsDeleting(false);
+            setLoopNum(loopNum + 1);
+        }
+    };
 
     return (
-        <section id="home" className="relative pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-black transition-colors duration-300">
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20  lg:pl-[30px]">
+        <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
+            {/* Dynamic Background Elements */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary/5 dark:bg-secondary/5 blur-[120px] animate-blob"></div>
+                <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/5 dark:bg-primary/5 blur-[120px] animate-blob animation-delay-2000"></div>
+            </div>
 
-                    {/* Left Column: Text Content */}
-                    <div className="lg:w-1/2 text-center lg:text-left animate-slide-right">
-                        <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-semibold tracking-wide">
-                            🚀 Launch Your Tech Career Today
-                        </div>
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-dark dark:text-white mb-6 leading-tight">
-                            Master the <br className="hidden lg:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-                                Future of Tech
-                            </span>
-                        </h1>
-                        <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                            Join over 5,000+ graduates getting hired at top companies. Learn from industry experts, build real-world projects, and get 100% placement support.
-                        </p>
-                        <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                            <a href="#programs" className="px-8 py-4 bg-secondary hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all transform hover:-translate-y-1">
-                                View Courses
-                            </a>
-                            <a href="#contact" className="px-8 py-4 bg-white dark:bg-gray-800 text-secondary dark:text-white border border-gray-200 dark:border-gray-700 font-bold rounded-xl shadow-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
-                                Get Consultation
-                            </a>
-                        </div>
-
-                        <div className="mt-10 flex items-center justify-center lg:justify-start gap-4 text-sm text-gray-500 dark:text-gray-400">
-                            <div className="flex -space-x-2">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-900" alt="User" />
-                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-900" alt="User" />
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64" className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-900" alt="User" />
-                            </div>
-                            <span>Join 500+ Active Learners</span>
-                        </div>
+            <div className="container mx-auto px-4 text-center">
+                <div ref={ref} className={`${animationClass}`}>
+                    {/* Badge */}
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary font-semibold text-sm mb-8 animate-bounce">
+                        <span className="relative flex h-3 w-3">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+                        </span>
+                        Industry-Level Project Training
                     </div>
 
-                    {/* Right Column: Visual/Image */}
-                    <div className="lg:w-1/2 relative animate-slide-left">
-                        <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 dark:border-white/5 bg-white/5 backdrop-blur-sm">
-                            <img
-                                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
-                                alt="Students learning"
-                                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
-                                fetchpriority="high"
-                                decoding="async"
-                            />
-                        </div>
+                    {/* Heading */}
+                    <h1 className="text-4xl md:text-7xl font-heading font-black text-primary dark:text-white leading-tight mb-6">
+                        Master In-Demand IT Skills <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-orange-600">
+                            with an Industry Mentor
+                        </span>
+                    </h1>
 
-                        {/* Floating Qualification Card */}
-                        <div className="absolute -bottom-6 -left-6 md:bottom-8 md:-left-8 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 animate-bounce z-20" style={{ animationDuration: '3s' }}>
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 bg-green-100 dark:bg-green-900/50 rounded-full text-green-600">
-                                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p className="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase">Placement</p>
-                                    <p className="text-lg font-bold text-dark dark:text-white">100% Success</p>
-                                </div>
-                            </div>
-                        </div>
+                    {/* Typing Effect */}
+                    <div className="text-2xl md:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-8 h-12">
+                        Programs in: <span className="text-secondary border-r-4 border-secondary pr-1">{displayText}</span>
                     </div>
 
-                    {/* Decorative Background Elements */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10">
-                        <div className="absolute top-0 right-0 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-blob"></div>
-                        <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-2000"></div>
+                    {/* Description */}
+                    <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
+                        Gain practical, hands-on experience directly from a working professional with 2+ years of industry experience. Build real projects, prepare for interviews, and launch your career in top-tier tech domains.
+                    </p>
+
+                    {/* CTAs */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a
+                            href="#programs"
+                            className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-2xl transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group"
+                        >
+                            View All Programs
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                        <a
+                            href="#contact"
+                            className="w-full sm:w-auto px-8 py-4 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-2xl transition-all shadow-xl shadow-secondary/20 flex items-center justify-center gap-2"
+                        >
+                            Book Free Consultation
+                        </a>
+                    </div>
+
+                    {/* Stats/Proof */}
+                    <div className="mt-16 pt-8 border-t border-gray-100 dark:border-gray-800 grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div>
+                            <div className="text-3xl font-black text-primary dark:text-white">10+</div>
+                            <div className="text-sm text-gray-500 font-medium">Industry Domains</div>
+                        </div>
+                        <div>
+                            <div className="text-3xl font-black text-primary dark:text-white">Real</div>
+                            <div className="text-sm text-gray-500 font-medium">Project Focus</div>
+                        </div>
+                        <div>
+                            <div className="text-3xl font-black text-primary dark:text-white">Live</div>
+                            <div className="text-sm text-gray-500 font-medium">Online Classes</div>
+                        </div>
+                        <div>
+                            <div className="text-3xl font-black text-primary dark:text-white">1-on-1</div>
+                            <div className="text-sm text-gray-500 font-medium">Career Mentorship</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Floating Badge */}
+            <div className="hidden lg:block absolute right-12 bottom-20 animate-float">
+                <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-2xl border border-secondary/20 flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white text-2xl">
+                        🏆
+                    </div>
+                    <div className="text-left">
+                        <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">Industry Mentor</div>
+                        <div className="text-primary dark:text-white font-black">2+ Years Experience</div>
                     </div>
                 </div>
             </div>

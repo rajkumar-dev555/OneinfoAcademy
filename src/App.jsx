@@ -3,8 +3,12 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 
 // Lazy load components that are below the fold
-const SuccessStories = lazy(() => import('./components/SuccessStories'));
+const About = lazy(() => import('./components/About'));
 const Programs = lazy(() => import('./components/Programs'));
+const WhoShouldJoin = lazy(() => import('./components/WhoShouldJoin'));
+const TrainingModel = lazy(() => import('./components/TrainingModel'));
+const SuccessStories = lazy(() => import('./components/SuccessStories'));
+const WhyChooseUs = lazy(() => import('./components/WhyChooseUs'));
 const PlacementSupport = lazy(() => import('./components/PlacementSupport'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
@@ -25,8 +29,12 @@ function App() {
       <Hero />
       <main>
         <Suspense fallback={<LoadingSection />}>
-          <SuccessStories />
+          <About />
           <Programs />
+          <WhoShouldJoin />
+          <TrainingModel />
+          <SuccessStories />
+          <WhyChooseUs />
           <PlacementSupport />
           <Contact />
         </Suspense>
