@@ -1,0 +1,28 @@
+# Oneinfo Academy - Best IT Training Institute in Coimbatore
+
+Oneinfo Academy is a premier IT training institute located in Coimbatore, Tamil Nadu, India. We specialize in providing industry-mentor led training programs across multiple domains including Artificial Intelligence, Full Stack Development, Cyber Security, DevOps, Cloud Engineering, and Data Science.
+
+## Core Courses & Slugs
+- Full Stack Development Course in Coimbatore: /full-stack-development-course-coimbatore
+- Artificial Intelligence Course in Coimbatore: /ai-course-coimbatore
+- Cyber Security Training in Coimbatore: /cyber-security-course-coimbatore
+- DevOps & Cloud Engineering Course in Coimbatore: /devops-course-coimbatore
+- Data Science Course in Coimbatore: /data-science-course-coimbatore
+- UI/UX Design Training in Coimbatore: /ui-ux-design-training-coimbatore
+- Digital Marketing Course in Coimbatore: /digital-marketing-course-coimbatore
+- Software Testing Training in Coimbatore: /software-testing-training-coimbatore
+
+## Target Audience
+- Final year students and fresh graduates in Coimbatore looking for job-oriented training.
+- Career switchers transitioning into the IT sector.
+- Working professionals looking for high-salary roles in DevOps, AI, and Full Stack Development.
+
+## Value Proposition
+- Training led by industry mentors (DevSecOps Lead).
+- 100% Placement support with 7-step career model.
+- Practical, project-driven curriculum.
+- Local focus on Coimbatore talent.
+
+## Contact Information
+- Location: Coimbatore, Tamil Nadu, India.
+- Website: https://oneinfoacademy.com

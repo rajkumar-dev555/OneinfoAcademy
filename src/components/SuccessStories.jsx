@@ -11,10 +11,10 @@ const SuccessStories = () => {
 
     // Realistic stats - Sync with multi-domain
     const stats = [
-        { label: 'Students Mentored', value: 200, suffix: '+' },
-        { label: 'Skill Domains', value: 10, suffix: '' },
+        { label: 'Students Mentored', value: 500, suffix: '+' },
+        { label: 'Skill Domains', value: 12, suffix: '' },
         { label: 'Job Readiness', value: 100, suffix: '%' },
-        { label: 'Mentor Experience', value: 2, suffix: 'y+' },
+        { label: 'Avg Salary Hike', value: 40, suffix: '%' },
     ];
 
     const stories = [
@@ -97,7 +97,7 @@ const SuccessStories = () => {
                         Student <span className="text-secondary">Success Stories</span>
                     </h2>
                     <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto italic leading-relaxed">
-                        "Your success is my benchmark. Every testimonial here represents a career pivoted and a skill mastered."
+                        "Your success is our ultimate mission. Every milestone here represents a career pivoted and a dream achieved through collective effort."
                     </p>
                 </div>
 

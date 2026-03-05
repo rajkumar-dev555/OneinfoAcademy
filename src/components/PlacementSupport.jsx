@@ -18,7 +18,7 @@ const PlacementSupport = () => {
         },
         {
             title: 'Technical Mock Interviews',
-            description: 'Realistic interview sessions with the industry lead to prepare you for high-pressure technical rounds.',
+            description: 'Realistic interview sessions with our expert panel to prepare you for high-pressure technical rounds.',
             icon: '👨‍💻',
         },
         {

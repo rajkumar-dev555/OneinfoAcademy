@@ -1,16 +1,17 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     const [ref, animationClass] = useScrollAnimation();
 
     const skills = [
-        'DevSecOps & Cloud Engineering',
-        'Full Stack Development',
-        'AI & Applied AI Integration',
-        'Network & Cyber Security',
-        'Embedded Systems & IoT',
-        'Digital Growth & Strategy'
+        { name: 'DevOps & Cloud Engineering', slug: 'devops-course-coimbatore' },
+        { name: 'Full Stack Development', slug: 'full-stack-development-course-coimbatore' },
+        { name: 'AI & Applied AI Integration', slug: 'ai-course-coimbatore' },
+        { name: 'Network & Cyber Security', slug: 'cyber-security-course-coimbatore' },
+        { name: 'Data Science & Analytics', slug: 'data-science-course-coimbatore' },
+        { name: 'Digital Growth & Strategy', slug: 'digital-marketing-course-coimbatore' }
     ];
 
     const stats = [
@@ -28,33 +29,33 @@ const About = () => {
                     <div className="lg:w-1/2 space-y-8">
                         <div className="space-y-4">
                             <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-bold tracking-widest uppercase border border-secondary/20">
-                                The Mentor
+                                Our Mission
                             </div>
                             <h2 className="text-3xl md:text-5xl font-heading font-black text-primary dark:text-white leading-tight">
-                                Industry Experience Meets <br />
-                                <span className="text-secondary">Multi-Domain Expertise</span>
+                                Bridging the Gap Between <br />
+                                <span className="text-secondary">Academia and Industry</span>
                             </h2>
                         </div>
 
                         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic border-l-4 border-secondary pl-6">
-                            "My mission is simple: to make students industry-ready — not just course-complete. I teach what works in real product-based companies."
+                            "Our vision is to build a worldwide community of skilled professionals who are ready to tackle real-world challenges from day one."
                         </p>
 
                         <div className="space-y-4">
                             <p className="text-gray-600 dark:text-gray-300 font-medium">
-                                With a background as a DevSecOps Lead in a product-based company, I've spent years managing complex infrastructures, building scalable apps, and securing systems. I bring that real-world exposure to every session.
+                                At Oneinfo Academy, we aren't just an education platform; we are an industry-integrated ecosystem. Our curriculum is designed and delivered by working leads from top-tier product companies, ensuring that every student learns exactly what the market demands.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {skills.map((skill, index) => (
-                                    <div key={index} className="flex items-center gap-3 group">
+                                    <Link key={index} to={`/${skill.slug}`} className="flex items-center gap-3 group">
                                         <div className="w-6 h-6 rounded-lg bg-primary/5 dark:bg-white/5 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
                                             <svg className="w-4 h-4 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="text-sm font-bold text-primary dark:text-gray-300 group-hover:text-secondary transition-colors">{skill}</span>
-                                    </div>
+                                        <span className="text-sm font-bold text-primary dark:text-gray-300 group-hover:text-secondary transition-colors">{skill.name}</span>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -73,14 +74,14 @@ const About = () => {
                     <div className="lg:w-1/2 relative">
                         <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-8 border-gray-50 dark:border-gray-800">
                             <img
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                                alt="Your Name - Industry Mentor"
+                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Oneinfo Academy Team"
                                 className="w-full h-auto object-cover aspect-[4/5] filter grayscale hover:grayscale-0 transition-all duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
-                            <div className="absolute bottom-8 left-8 right-8">
-                                <div className="text-2xl font-black text-white">Vignesh Kumar</div>
-                                <div className="text-secondary font-bold text-sm tracking-widest uppercase">DevSecOps Lead & Mentor</div>
+                            <div className="absolute bottom-8 left-8 right-8 text-center sm:text-left">
+                                <div className="text-2xl font-black text-white">Oneinfo Academy</div>
+                                <div className="text-secondary font-bold text-sm tracking-widest uppercase">Center for Excellence & Career Growth</div>
                             </div>
                         </div>
 

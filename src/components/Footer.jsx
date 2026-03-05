@@ -30,10 +30,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-white border-l-4 border-secondary pl-3">Popular Tracks</h4>
                         <ul className="space-y-3 text-gray-400 text-sm font-medium">
-                            <li><a href="#programs" className="hover:text-secondary transition-colors">Full Stack Development</a></li>
-                            <li><a href="#programs" className="hover:text-secondary transition-colors">AI & Applied AI</a></li>
-                            <li><a href="#programs" className="hover:text-secondary transition-colors">Cyber Security</a></li>
-                            <li><a href="#programs" className="hover:text-secondary transition-colors">DevOps & Cloud</a></li>
+                            <li><a href="/full-stack-development-course-coimbatore" className="hover:text-secondary transition-colors">Full Stack Development</a></li>
+                            <li><a href="/ai-course-coimbatore" className="hover:text-secondary transition-colors">AI & Applied AI</a></li>
+                            <li><a href="/cyber-security-course-coimbatore" className="hover:text-secondary transition-colors">Cyber Security</a></li>
+                            <li><a href="/devops-course-coimbatore" className="hover:text-secondary transition-colors">DevOps & Cloud</a></li>
                         </ul>
                     </div>
 
@@ -41,10 +41,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-white border-l-4 border-secondary pl-3">Advanced Tracks</h4>
                         <ul className="space-y-3 text-gray-400 text-sm font-medium">
-                            <li><a href="#programs" className="hover:text-secondary transition-colors">Data Science</a></li>
-                            <li><a href="#programs" className="hover:text-secondary transition-colors">UI/UX Design</a></li>
-                            <li><a href="#programs" className="hover:text-secondary transition-colors">Software Testing</a></li>
-                            <li><a href="#programs" className="hover:text-secondary transition-colors">Digital Marketing</a></li>
+                            <li><a href="/data-science-course-coimbatore" className="hover:text-secondary transition-colors">Data Science</a></li>
+                            <li><a href="/ui-ux-design-training-coimbatore" className="hover:text-secondary transition-colors">UI/UX Design</a></li>
+                            <li><a href="/software-testing-training-coimbatore" className="hover:text-secondary transition-colors">Software Testing</a></li>
+                            <li><a href="/digital-marketing-course-coimbatore" className="hover:text-secondary transition-colors">Digital Marketing</a></li>
                         </ul>
                     </div>
 
@@ -61,9 +61,10 @@ const Footer = () => {
                 </div>
 
                 <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-gray-500 text-xs font-semibold">
-                        &copy; {new Date().getFullYear()} OneinfoAcademy. All rights reserved.
-                    </p>
+                    <div className="text-gray-500 text-xs font-semibold">
+                        <p className="mb-2">&copy; {new Date().getFullYear()} OneinfoAcademy. All rights reserved.</p>
+                        <p className="text-gray-400">Oneinfo Academy – IT Training Institute in Coimbatore, Tamil Nadu, India.</p>
+                    </div>
                     <div className="flex items-center gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-600">
                         <span>Industry Ready</span>
                         <span className="w-1 h-1 bg-secondary rounded-full"></span>

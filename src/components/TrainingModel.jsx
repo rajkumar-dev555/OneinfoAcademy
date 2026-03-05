@@ -39,7 +39,7 @@ const TrainingModel = () => {
         {
             step: 6,
             title: 'Mock Interview Prep',
-            description: 'Rigorous interviews with direct feedback from the industry mentor.',
+            description: 'Rigorous interviews with direct feedback from our Academy Faculty network.',
             icon: '🎙️',
         },
         {

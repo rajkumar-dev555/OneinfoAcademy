@@ -70,20 +70,17 @@ const Hero = () => {
 
                     {/* Heading */}
                     <h1 className="text-4xl md:text-7xl font-heading font-black text-primary dark:text-white leading-tight mb-6">
-                        Master In-Demand IT Skills <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-orange-600">
-                            with an Industry Mentor
-                        </span>
+                        Best IT Training Institute in Coimbatore – Industry Mentor Programs
                     </h1>
 
                     {/* Typing Effect */}
                     <div className="text-2xl md:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-8 h-12">
-                        Programs in: <span className="text-secondary border-r-4 border-secondary pr-1">{displayText}</span>
+                        Specialized Academy for: <span className="text-secondary border-r-4 border-secondary pr-1">{displayText}</span>
                     </div>
 
                     {/* Description */}
                     <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
-                        Gain practical, hands-on experience directly from a working professional with 2+ years of industry experience. Build real projects, prepare for interviews, and launch your career in top-tier tech domains.
+                        Oneinfo Academy is a leading IT training institute in Coimbatore offering job-oriented courses in Full Stack Development, Artificial Intelligence, Cyber Security, DevOps & Cloud Engineering, and Data Science. Our mentor-led programs are designed for students, fresh graduates, and working professionals looking to build high-paying careers in the IT industry.
                     </p>
 
                     {/* CTAs */}
@@ -108,20 +105,20 @@ const Hero = () => {
                     {/* Stats/Proof */}
                     <div className="mt-16 pt-8 border-t border-gray-100 dark:border-gray-800 grid grid-cols-2 md:grid-cols-4 gap-8">
                         <div>
-                            <div className="text-3xl font-black text-primary dark:text-white">10+</div>
-                            <div className="text-sm text-gray-500 font-medium">Industry Domains</div>
+                            <div className="text-3xl font-black text-primary dark:text-white">500+</div>
+                            <div className="text-sm text-gray-500 font-medium">Students Trained</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-black text-primary dark:text-white">Real</div>
-                            <div className="text-sm text-gray-500 font-medium">Project Focus</div>
+                            <div className="text-3xl font-black text-primary dark:text-white">Expert</div>
+                            <div className="text-sm text-gray-500 font-medium">Faculty Network</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-black text-primary dark:text-white">Live</div>
-                            <div className="text-sm text-gray-500 font-medium">Online Classes</div>
+                            <div className="text-3xl font-black text-primary dark:text-white">100%</div>
+                            <div className="text-sm text-gray-500 font-medium">Hands-on Lab</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-black text-primary dark:text-white">1-on-1</div>
-                            <div className="text-sm text-gray-500 font-medium">Career Mentorship</div>
+                            <div className="text-3xl font-black text-primary dark:text-white">Dedicated</div>
+                            <div className="text-sm text-gray-500 font-medium">Placement Cell</div>
                         </div>
                     </div>
                 </div>
@@ -131,11 +128,11 @@ const Hero = () => {
             <div className="hidden lg:block absolute right-12 bottom-20 animate-float">
                 <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-2xl border border-secondary/20 flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white text-2xl">
-                        🏆
+                        🏅
                     </div>
                     <div className="text-left">
-                        <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">Industry Mentor</div>
-                        <div className="text-primary dark:text-white font-black">2+ Years Experience</div>
+                        <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">Global Academy</div>
+                        <div className="text-primary dark:text-white font-black">ISO Certified Standards</div>
                     </div>
                 </div>
             </div>

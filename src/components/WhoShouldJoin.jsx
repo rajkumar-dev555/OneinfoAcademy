@@ -1,5 +1,6 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { Link } from 'react-router-dom';
 
 const WhoShouldJoin = () => {
     const [headerRef, headerAnim] = useScrollAnimation();
@@ -8,27 +9,37 @@ const WhoShouldJoin = () => {
     const audiences = [
         {
             title: 'Final Year Students',
-            description: 'Get industry exposure before graduation and land your first tech job with confidence.',
+            description: 'Get industry exposure before graduation and land your first tech job. Ideal for picking up ',
+            linkText: 'Full Stack Development',
+            linkSlug: 'full-stack-development-course-coimbatore',
             icon: '🎓',
         },
         {
             title: 'Fresh Graduates',
-            description: 'Bridge the gap between academic theory and high-demand industry requirements.',
+            description: 'Bridge the gap between academic theory and requirements. Start with ',
+            linkText: 'Software Testing (QA)',
+            linkSlug: 'software-testing-training-coimbatore',
             icon: '🌱',
         },
         {
             title: 'Non-IT Career Switchers',
-            description: 'Transition into the tech world with a guided, mentor-led path tailored for beginners.',
+            description: 'Transition into tech with a mentor-led path. Highly recommend ',
+            linkText: 'UI/UX Design',
+            linkSlug: 'ui-ux-design-training-coimbatore',
             icon: '🔄',
         },
         {
             title: 'Working Professionals',
-            description: 'Upgrade your skills to modern domains like AI or Cloud to unlock higher salary brackets.',
+            description: 'Upgrade your skills to modern domains like ',
+            linkText: 'DevOps or AI',
+            linkSlug: 'devops-course-coimbatore',
             icon: '💼',
         },
         {
             title: 'Domain Upgraders',
-            description: 'Perfect for developers wanting to pivot specifically into Security, DevOps, or AI.',
+            description: 'Perfect for pivoting into specialized fields like ',
+            linkText: 'Cyber Security',
+            linkSlug: 'cyber-security-course-coimbatore',
             icon: '⚡',
         },
     ];
@@ -59,7 +70,12 @@ const WhoShouldJoin = () => {
 
                             <span className="text-5xl mb-6 block group-hover:scale-110 transition-transform origin-left">{item.icon}</span>
                             <h3 className="text-xl font-bold text-primary dark:text-white mb-3">{item.title}</h3>
-                            <p className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed font-medium">{item.description}</p>
+                            <p className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+                                {item.description}
+                                <Link to={`/${item.linkSlug}`} className="text-secondary hover:underline font-bold">
+                                    {item.linkText}
+                                </Link>
+                            </p>
                         </div>
                     ))}
                 </div>
