@@ -10,6 +10,8 @@ const TrainingModel = lazy(() => import('../components/TrainingModel'));
 const SuccessStories = lazy(() => import('../components/SuccessStories'));
 const WhyChooseUs = lazy(() => import('../components/WhyChooseUs'));
 const PlacementSupport = lazy(() => import('../components/PlacementSupport'));
+const SEOContent = lazy(() => import('../components/SEOContent'));
+const FAQSection = lazy(() => import('../components/FAQ'));
 const Contact = lazy(() => import('../components/Contact'));
 const Footer = lazy(() => import('../components/Footer'));
 const ScrollToTop = lazy(() => import('../components/ScrollToTop'));
@@ -31,11 +33,13 @@ const Home = () => {
                 <Suspense fallback={<LoadingSection />}>
                     <About />
                     <Programs />
+                    <SEOContent />
                     <WhoShouldJoin />
                     <TrainingModel />
                     <SuccessStories />
                     <WhyChooseUs />
                     <PlacementSupport />
+                    <FAQSection />
                     <Contact />
                 </Suspense>
             </main>

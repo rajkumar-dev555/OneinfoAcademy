@@ -70,7 +70,7 @@ const Hero = () => {
 
                     {/* Heading */}
                     <h1 className="text-4xl md:text-7xl font-heading font-black text-primary dark:text-white leading-tight mb-6">
-                        Best IT Training Institute in Coimbatore – Industry Mentor Programs
+                        #1 IT Training Institute in Coimbatore – Full Stack, AI, Cyber Security & DevOps Courses
                     </h1>
 
                     {/* Typing Effect */}
@@ -130,10 +130,7 @@ const Hero = () => {
                     <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white text-2xl">
                         🏅
                     </div>
-                    <div className="text-left">
-                        <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">Global Academy</div>
-                        <div className="text-primary dark:text-white font-black">ISO Certified Standards</div>
-                    </div>
+
                 </div>
             </div>
         </section>

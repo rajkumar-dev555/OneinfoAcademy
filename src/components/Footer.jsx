@@ -63,7 +63,7 @@ const Footer = () => {
                 <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-gray-500 text-xs font-semibold">
                         <p className="mb-2">&copy; {new Date().getFullYear()} OneinfoAcademy. All rights reserved.</p>
-                        <p className="text-gray-400">Oneinfo Academy – IT Training Institute in Coimbatore, Tamil Nadu, India.</p>
+                        <p className="text-gray-400">Oneinfo Academy – Premium IT Skill Academy in Coimbatore. Not affiliated with any degree-granting engineering colleges.</p>
                     </div>
                     <div className="flex items-center gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-600">
                         <span>Industry Ready</span>

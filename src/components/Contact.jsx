@@ -50,8 +50,35 @@ const Contact = () => {
     return (
         <section id="contact" className="py-20 bg-gray-50 dark:bg-black transition-colors duration-300">
             <div className="container mx-auto px-4 max-w-5xl">
+                {/* Roadmap Section */}
+                <div className="bg-gradient-to-br from-primary to-gray-900 rounded-[3rem] p-12 text-center mb-16 shadow-2xl relative overflow-hidden group">
+                    <div className="absolute top-0 left-0 w-full h-full bg-secondary/5 blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="relative z-10 space-y-6">
+                        <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/20 text-secondary text-sm font-bold tracking-widest uppercase border border-secondary/30">
+                            Exclusive Offer
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-heading font-black text-white leading-tight">
+                            Free IT Career <span className="text-secondary">Roadmap for 2026</span>
+                        </h2>
+                        <p className="text-xl text-gray-400 max-w-2xl mx-auto font-medium">
+                            Not sure where to start? Get a free 1-on-1 career consultation for students who want to enter the highly competitive IT industry.
+                        </p>
+                        <div className="pt-4">
+                            <a
+                                href="#contact-form"
+                                className="inline-flex items-center gap-3 px-10 py-5 bg-secondary hover:bg-secondary/90 text-white font-black text-xl rounded-2xl transition-all shadow-xl shadow-secondary/20 active:scale-95 group"
+                            >
+                                Get Your Free Roadmap
+                                <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Header */}
-                <div className="text-center mb-12">
+                <div id="contact-form" className="text-center mb-12">
                     <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-secondary/10 text-secondary text-sm font-semibold tracking-wide border border-secondary/20">
                         🚀 Take the Next Step
                     </div>
@@ -85,7 +112,7 @@ const Contact = () => {
 
                         <div className="mt-10 pt-8 border-t border-white/10 relative">
                             <a
-                                href="https://wa.me/919876543210"
+                                href="https://wa.me/919943481231"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold rounded-2xl transition-all shadow-lg active:scale-95"
@@ -139,8 +166,9 @@ const Contact = () => {
                                     name="course"
                                     required
                                     className="w-full px-5 py-3.5 rounded-2xl bg-gray-50 dark:bg-gray-800 border-2 border-transparent focus:border-secondary focus:bg-white dark:focus:bg-gray-800 transition-all text-primary dark:text-white appearance-none cursor-pointer"
+                                    defaultValue=""
                                 >
-                                    <option value="" disabled selected>Select a Program</option>
+                                    <option value="" disabled>Select a Program</option>
                                     {courses.map((course, index) => (
                                         <option key={index} value={course}>{course}</option>
                                     ))}
@@ -160,6 +188,23 @@ const Contact = () => {
                                 </div>
                             )}
                         </form>
+                    </div>
+                </div>
+
+                {/* Map Section */}
+                <div className="mt-20">
+                    <h4 className="text-xl font-bold text-primary dark:text-white mb-6 text-center">Visit Our Academy in Coimbatore</h4>
+                    <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 h-[400px]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125322.44153110294!2d76.88483286383637!3d11.011709403862793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f976681%3A0x2e9cffddad9db251!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1741328000000!5m2!1sen!2sin"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Oneinfo Academy Coimbatore Map"
+                        ></iframe>
                     </div>
                 </div>
             </div>

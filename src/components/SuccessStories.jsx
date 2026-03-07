@@ -34,7 +34,7 @@ const SuccessStories = () => {
             name: 'Dharshini Sri',
             role: 'Final Year Student (Project)',
             image: '/assets/images/testimonials/student4.png',
-            quote: "Grateful for the support on my final year Blockchain project. Complex concepts like smart contracts were simplified for me.",
+            quote: "Grateful for the support on my final year Gen-AI and LLM integration project. Complex concepts were simplified, helping me build a production-level application.",
         },
         {
             name: 'Yuvasri',

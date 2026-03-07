@@ -43,7 +43,10 @@ const About = () => {
 
                         <div className="space-y-4">
                             <p className="text-gray-600 dark:text-gray-300 font-medium">
-                                At Oneinfo Academy, we aren't just an education platform; we are an industry-integrated ecosystem. Our curriculum is designed and delivered by working leads from top-tier product companies, ensuring that every student learns exactly what the market demands.
+                                Oneinfo Academy is a leading IT training institute in <strong className="text-secondary">Coimbatore, Tamil Nadu</strong> offering industry-oriented training programs for students and professionals looking to build successful careers in the technology sector. At Oneinfo Academy, we aren't just another generic education platform; we are a modern, industry-integrated ecosystem. While traditional franchises focus on mass-distribution of basic skills, our curriculum is designed and delivered by active engineering leads from product-based MNCs.
+                            </p>
+                            <p className="text-sm text-secondary font-bold tracking-tight">
+                                Note: Oneinfo Academy is an independent specialized tech hub, distinctly focused on professional career mastery, separate from academic colleges.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

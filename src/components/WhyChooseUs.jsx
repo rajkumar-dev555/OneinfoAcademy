@@ -7,8 +7,8 @@ const WhyChooseUs = () => {
 
     const reasons = [
         {
-            title: 'Expert-Led Faculty',
-            description: 'Learn from a global network of leads who actively manage infrastructure and security at top product companies.',
+            title: 'High-Salary MNC Mentors',
+            description: 'Learn from active DevSecOps leads in top-tier product MNCs. Our mentors don\'t just teach; they prepare you for global high-paying roles.',
             icon: (
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -34,8 +34,8 @@ const WhyChooseUs = () => {
             ),
         },
         {
-            title: 'Limited Batch Size',
-            description: 'We keep batches small to ensure 1-on-1 personalized mentorship and doubt clearing.',
+            title: 'Personalized vs Standardized',
+            description: 'Unlike massive training franchises with standardized curricula, we provide personalized 1-on-1 mentorship led by industry experts who adjust to your speed.',
             icon: (
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
