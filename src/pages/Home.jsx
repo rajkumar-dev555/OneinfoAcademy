@@ -16,6 +16,7 @@ const Contact = lazy(() => import('../components/Contact'));
 const Footer = lazy(() => import('../components/Footer'));
 const ScrollToTop = lazy(() => import('../components/ScrollToTop'));
 const WhatsAppWidget = lazy(() => import('../components/WhatsAppWidget'));
+const CallWidget = lazy(() => import('../components/CallWidget'));
 
 // Loading fallback
 const LoadingSection = () => (
@@ -47,6 +48,7 @@ const Home = () => {
                 <Footer />
                 <ScrollToTop />
                 <WhatsAppWidget />
+                <CallWidget />
             </Suspense>
         </div>
     );
