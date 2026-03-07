@@ -9,7 +9,7 @@ const Hero = () => {
     const [ref, animationClass] = useScrollAnimation();
 
     const domains = [
-        'AI & Applied AI',
+        'AI Applied Fullstack Development',
         'Full Stack Development',
         'Cyber Security',
         'DevOps & Cloud',
@@ -18,6 +18,7 @@ const Hero = () => {
         'Digital Marketing',
         'Software Testing',
         'Networking',
+        'Cloud Engineering'
     ];
 
     useEffect(() => {
