@@ -18,7 +18,6 @@ const Hero = () => {
         'Digital Marketing',
         'Software Testing',
         'Networking',
-        'Embedded Systems & IoT'
     ];
 
     useEffect(() => {
@@ -125,14 +124,7 @@ const Hero = () => {
             </div>
 
             {/* Floating Badge */}
-            <div className="hidden lg:block absolute right-12 bottom-20 animate-float">
-                <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-2xl border border-secondary/20 flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white text-2xl">
-                        🏅
-                    </div>
 
-                </div>
-            </div>
         </section>
     );
 };

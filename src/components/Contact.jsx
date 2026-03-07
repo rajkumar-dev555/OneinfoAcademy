@@ -43,7 +43,6 @@ const Contact = () => {
         "Digital Marketing",
         "Software Testing (QA)",
         "Networking & Infrastructure",
-        "Embedded Systems & IoT",
         "Not Sure – Need Career Guidance",
     ];
 
