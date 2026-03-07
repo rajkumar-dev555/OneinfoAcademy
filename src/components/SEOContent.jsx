@@ -18,13 +18,13 @@ const SEOContent = () => {
                             Best IT Courses in Coimbatore
                         </h2>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
-                            If you are searching for the <strong className="text-secondary">best IT courses in Coimbatore</strong> with practical training and career guidance, Oneinfo Academy offers industry-relevant programs designed to help students gain job-ready skills.
+                            If you are searching for the <strong className="text-secondary">best IT courses in Coimbatore</strong> with practical training and career guidance, Oneinfo Academy offers industry-relevant programs designed to help students gain job-ready skills. As a premier <strong className="text-primary dark:text-white">Edutech platform</strong>, we bridge the gap between traditional academic learning and the rapidly evolving requirements of the global tech industry.
                         </p>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
-                            Our training programs focus on high-demand domains such as <strong className="text-primary dark:text-white">Full Stack Development, Artificial Intelligence, Cyber Security, DevOps, Cloud Engineering, and Data Science</strong>. Each program includes real-time projects, mentor guidance, and career preparation support.
+                            Our training programs focus on high-demand domains such as <strong className="text-primary dark:text-white">Full Stack Development, Artificial Intelligence, Cyber Security, DevOps, Cloud Engineering, and Data Science</strong>. We don't just teach theory; we provide an immersive <strong className="text-secondary">Industry Mentor model</strong> where you learn from senior developers working in top MNCs. Each program includes real-time projects, personalized mentor guidance, and 100% career preparation support.
                         </p>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
-                            Students from across Coimbatore join Oneinfo Academy to learn modern technologies and build successful careers in the IT industry.
+                            Oneinfo Academy is recognized as the best IT training institute in Coimbatore because of our commitment to quality and outcomes. Our <strong className="text-primary dark:text-white">Full Stack Development course</strong> covers the entire MERN and MEAN stacks, while our <strong className="text-primary dark:text-white">Data Science training</strong> delves deep into Python, Machine Learning, and Big Data analytics.
                         </p>
                     </div>
 
@@ -37,18 +37,18 @@ const SEOContent = () => {
                             Why Learn IT Skills in Coimbatore?
                         </h3>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
-                            <strong className="text-secondary">Coimbatore</strong> is rapidly growing as a technology and startup hub in <strong className="text-secondary">Tamil Nadu</strong>. Many IT companies, startups, and digital businesses are creating new opportunities for skilled professionals.
+                            <strong className="text-secondary">Coimbatore</strong> is rapidly growing as a major technology and startup hub in <strong className="text-secondary">Tamil Nadu</strong>. With numerous IT parks and a flourishing ecosystem for innovation, the city offers a wealth of opportunities for skilled professionals in software development, cloud infrastructure, and data analytics.
                         </p>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
-                            By learning modern IT skills such as <strong className="text-primary dark:text-white">Full Stack Development, Data Science, Cyber Security, and DevOps</strong>, students can access high-paying career opportunities both locally and globally.
+                            By mastering modern IT skills like <strong className="text-primary dark:text-white">Cloud Engineering and Cyber Security</strong>, students can access high-paying career opportunities both locally and globally. At Oneinfo Academy, we ensure our learners are ready for this growth by providing hands-on exposure to enterprise tools and professional workflows used by modern <strong className="text-primary dark:text-white">Edutech companies</strong>.
                         </p>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
-                            Oneinfo Academy helps learners from <strong className="text-secondary">Coimbatore</strong> and across <strong className="text-secondary">India</strong> gain practical knowledge that matches industry requirements.
+                            Whether you are a fresh graduate or a career switcher, our <strong className="text-primary dark:text-white">AI and Machine Learning programs</strong> are designed to equip you with the expertise needed to excel in the 2025 job market. Join the thousands of learners from across India who have trusted Oneinfo Academy to transform their professional trajectory.
                         </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 
