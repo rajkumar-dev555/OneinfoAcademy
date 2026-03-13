@@ -35,7 +35,7 @@ const Contact = () => {
 
     const courses = [
         "Full Stack Development",
-        "Artificial Intelligence & Applied AI",
+        "Artificial Intelligence & Machine Learning",
         "Cyber Security",
         "DevOps & Cloud Engineering",
         "Data Science & Analytics",

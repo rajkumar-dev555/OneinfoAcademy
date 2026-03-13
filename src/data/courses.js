@@ -64,7 +64,7 @@ export const courses = [
         perfectFor: 'IT Pros looking for high-salary roles',
         icon: '☁️',
         topics: [
-            'AWS/Azure/GCP Cloud',
+            'AWS Cloud',
             'CI/CD Pipelines (Jenkins, Gitlab)',
             'Docker & Kubernetes',
             'Infrastructure as Code (Terraform)',
