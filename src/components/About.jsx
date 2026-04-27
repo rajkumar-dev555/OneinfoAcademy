@@ -6,19 +6,19 @@ const About = () => {
     const [ref, animationClass] = useScrollAnimation();
 
     const skills = [
-        { name: 'DevOps & Cloud Engineering', slug: 'devops-course-coimbatore' },
-        { name: 'Full Stack Development', slug: 'full-stack-development-course-coimbatore' },
-        { name: 'AI & Applied AI Integration', slug: 'ai-course-coimbatore' },
-        { name: 'Network & Cyber Security', slug: 'cyber-security-course-coimbatore' },
-        { name: 'Data Science & Analytics', slug: 'data-science-course-coimbatore' },
-        { name: 'Digital Growth & Strategy', slug: 'digital-marketing-course-coimbatore' }
+        { name: 'MERN & Full Stack Engineering', slug: 'full-stack-development-course-coimbatore' },
+        { name: 'AI & Applied Machine Learning', slug: 'ai-course-coimbatore' },
+        { name: 'DevOps & Cloud Infrastructure', slug: 'devops-course-coimbatore' },
+        { name: 'Cyber Security & Networking', slug: 'cyber-security-course-coimbatore' },
+        { name: 'Data Science & Big Data', slug: 'data-science-course-coimbatore' },
+        { name: 'UI/UX & Product Design', slug: 'ui-ux-design-training-coimbatore' }
     ];
 
     const stats = [
-        { label: 'Industry Experience', value: '2+ Years' },
-        { label: 'Training Experience', value: '1.5+ Years' },
-        { label: 'Domains Covered', value: '10+' },
-        { label: 'Project Focused', value: '100%' }
+        { label: 'Domains Covered', value: '12+' },
+        { label: 'MNC Partners', value: '100+' },
+        { label: 'Project Focused', value: '100%' },
+        { label: 'Mentorship', value: '1-on-1' }
     ];
 
     return (
@@ -29,24 +29,27 @@ const About = () => {
                     <div className="lg:w-1/2 space-y-8">
                         <div className="space-y-4">
                             <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-bold tracking-widest uppercase border border-secondary/20">
-                                Our Mission
+                                Who We Are
                             </div>
                             <h2 className="text-3xl md:text-5xl font-heading font-black text-primary dark:text-white leading-tight">
-                                Bridging the Gap Between <br />
-                                <span className="text-secondary">Academia and Industry</span>
+                                A Specialized <span className="text-secondary">Technical Hub</span> <br />
+                                for Future Tech Leaders
                             </h2>
                         </div>
 
-                        <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic border-l-4 border-secondary pl-6">
-                            "Our vision is to build a worldwide community of skilled professionals who are ready to tackle real-world challenges from day one."
+                        <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic border-l-4 border-secondary pl-6 font-medium">
+                            "Most institutes teach you how to code. We teach you how to get hired."
                         </p>
 
                         <div className="space-y-4">
                             <p className="text-gray-600 dark:text-gray-300 font-medium">
-                                Oneinfo Academy is a leading IT training institute in <strong className="text-secondary">Coimbatore, Tamil Nadu</strong> offering industry-oriented training programs for students and professionals looking to build successful careers in the technology sector. At Oneinfo Academy, we aren't just another generic education platform; we are a modern, industry-integrated ecosystem. While traditional franchises focus on mass-distribution of basic skills, our curriculum is designed and delivered by active engineering leads from product-based MNCs.
+                                Based in <strong className="text-secondary">Coimbatore</strong>, Oneinfo Academy is where students transform into high-paid software professionals. We realized that traditional college degrees aren't enough for the 2026 tech market. That's why we built a training model that feels more like a <strong>tech internship</strong> than a classroom.
                             </p>
-                            <p className="text-sm text-secondary font-bold tracking-tight">
-                                Note: Oneinfo Academy is an independent specialized tech hub, distinctly focused on professional career mastery, separate from academic colleges.
+                            <p className="text-gray-600 dark:text-gray-300 font-medium">
+                                You'll be mentored by senior engineers who actually work in top companies. No boring lectures—just <strong>real-world projects</strong>, <strong>mock interviews</strong>, and <strong>direct placement support</strong> in Coimbatore's growing IT hubs.
+                            </p>
+                            <p className="text-sm text-secondary font-black uppercase tracking-widest">
+                                Pick your path and start your journey today.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -79,7 +82,7 @@ const About = () => {
                             <img
                                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                                 alt="Oneinfo Academy Team"
-                                className="w-full h-auto object-cover aspect-[4/5] filter grayscale hover:grayscale-0 transition-all duration-700"
+                                className="w-full h-auto object-cover aspect-[4/5] hover:scale-105 transition-all duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
                             <div className="absolute bottom-8 left-8 right-8 text-center sm:text-left">

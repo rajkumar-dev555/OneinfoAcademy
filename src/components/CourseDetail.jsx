@@ -62,15 +62,46 @@ const CourseDetail = () => {
                         <div className="lg:col-span-2 space-y-12">
                             {/* Course Overview */}
                             <section>
+                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 p-6 bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-xl">
+                                    <div className="space-y-1">
+                                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Average Salary Hike</span>
+                                        <div className="text-3xl font-black text-secondary">{course.averageSalary}</div>
+                                    </div>
+                                    <div className="h-12 w-[1px] bg-gray-200 dark:bg-gray-700 hidden md:block"></div>
+                                    <div className="space-y-1 text-left md:text-right">
+                                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Career Pathway</span>
+                                        <div className="text-lg font-bold text-primary dark:text-white">{course.careerPath}</div>
+                                    </div>
+                                </div>
+
                                 <h2 className="text-3xl font-heading font-bold text-primary dark:text-white mb-6 border-l-8 border-secondary pl-4">
-                                    About this Course
+                                    Why this Course?
                                 </h2>
-                                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6 font-medium">
                                     {course.description}
                                 </p>
-                                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                                     {course.detailedContent}
                                 </p>
+                            </section>
+
+                            {/* Projects Section */}
+                            <section className="bg-gradient-to-br from-primary to-primary-dark p-10 rounded-[3rem] text-white shadow-2xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-bl-[100px]"></div>
+                                <div className="relative z-10">
+                                    <h2 className="text-3xl font-heading font-bold mb-8">
+                                        Build <span className="text-secondary">3 Real-World Projects</span>
+                                    </h2>
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                        {course.projects.map((project, idx) => (
+                                            <div key={idx} className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/20">
+                                                <div className="text-2xl mb-4">🚀</div>
+                                                <h3 className="font-bold text-lg mb-2">{project}</h3>
+                                                <p className="text-xs text-white/70">A production-ready project for your professional portfolio.</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </section>
 
                             {/* Curriculum */}

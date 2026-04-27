@@ -49,7 +49,7 @@ const PlacementSupport = () => {
                         Our Job Readiness <span className="text-secondary">Assistance</span>
                     </h2>
                     <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-                        We don't just provide job alerts. We prepare you to command high salaries by mastering the entire selection process.
+                        Looking for <strong className="text-primary dark:text-white">IT Job Placement in Coimbatore</strong>? We provide expert <strong className="text-secondary">Software Career Guidance</strong> and <strong className="text-primary dark:text-white">100% Placement Courses</strong> to help you command high salaries in the global tech market.
                     </p>
                 </div>
 

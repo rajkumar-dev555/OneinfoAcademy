@@ -18,8 +18,8 @@ const Programs = () => {
                     <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary dark:text-white mb-6">
                         Explore Our <span className="text-secondary">Programs</span>
                     </h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                        We offer specialized certification tracks across 12+ domains. Every program is expert-led, project-driven, and aligned with international industry standards.
+                    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                        Master the most in-demand tech skills through our project-driven curriculum. From web engineering to security and AI, we offer comprehensive tracks led by industry experts.
                     </p>
                 </div>
 
@@ -51,50 +51,85 @@ const Programs = () => {
                                     Perfect for: {program.perfectFor}
                                 </div>
 
-                                {/* Topics */}
-                                <div className={`space-y-4 overflow-hidden transition-all duration-500 ${expandedCard === program.id ? 'max-h-[800px]' : 'max-h-[100px]'
+                                {/* Topics & Details */}
+                                <div className={`space-y-4 overflow-hidden transition-all duration-500 ${expandedCard === program.id ? 'max-h-[1000px]' : 'max-h-[100px]'
                                     }`}>
                                     {expandedCard === program.id && (
-                                        <div className="mb-4">
-                                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed italic">
+                                        <div className="mb-4 space-y-4">
+                                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
                                                 {program.description}
                                             </p>
-                                            <Link
-                                                to={`/${program.slug}`}
-                                                className="text-secondary hover:underline text-xs font-bold uppercase mt-2 block"
-                                            >
-                                                Learn more about {program.title} →
-                                            </Link>
+                                            
+                                            {/* Student Stats */}
+                                            <div className="grid grid-cols-2 gap-2 mt-4">
+                                                <div className="bg-primary/5 dark:bg-primary/20 p-3 rounded-2xl">
+                                                    <span className="text-[10px] uppercase font-bold text-gray-500 dark:text-gray-400 block mb-1">💼 Career Path</span>
+                                                    <span className="text-xs font-bold text-primary dark:text-white leading-tight">{program.careerPath}</span>
+                                                </div>
+                                                <div className="bg-secondary/5 dark:bg-secondary/20 p-3 rounded-2xl">
+                                                    <span className="text-[10px] uppercase font-bold text-gray-500 dark:text-gray-400 block mb-1">💰 Avg. Salary</span>
+                                                    <span className="text-xs font-bold text-secondary">{program.averageSalary}</span>
+                                                </div>
+                                            </div>
+
+                                            {/* Projects */}
+                                            <div className="mt-4">
+                                                <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-2">Hands-on Projects</h4>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {program.projects.map((proj, idx) => (
+                                                        <span key={idx} className="text-[10px] font-bold bg-white dark:bg-gray-700 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm">
+                                                            🚀 {proj}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
                                         </div>
                                     )}
                                     <div>
-                                        <h4 className="text-xs font-bold text-primary dark:text-secondary uppercase tracking-wider mb-2">Key Areas</h4>
-                                        {program.topics.map((topic, idx) => (
-                                            <div key={idx} className="flex items-center gap-2 mb-1">
-                                                <svg className="w-3.5 h-3.5 text-secondary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                <span className="text-sm text-gray-600 dark:text-gray-400">{topic}</span>
-                                            </div>
-                                        ))}
+                                        <h4 className="text-[10px] font-black text-primary dark:text-secondary uppercase tracking-[0.2em] mb-2">What you'll master</h4>
+                                        <div className="grid grid-cols-1 gap-1.5">
+                                            {program.topics.slice(0, expandedCard === program.id ? 10 : 3).map((topic, idx) => (
+                                                <div key={idx} className="flex items-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+                                                    <span className="text-xs font-medium text-gray-600 dark:text-gray-400">{topic}</span>
+                                                </div>
+                                            ))}
+                                            {expandedCard !== program.id && (
+                                                <span className="text-[10px] text-gray-400 font-bold ml-3.5">+ {program.topics.length - 3} more modules</span>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
 
                                 {/* Toggle Button */}
                                 <button
                                     onClick={() => setExpandedCard(expandedCard === program.id ? null : program.id)}
-                                    className="mt-3 text-secondary hover:text-secondary/80 text-sm font-semibold transition-colors focus:outline-none"
+                                    className="mt-6 w-full py-2.5 rounded-xl border-2 border-gray-100 dark:border-gray-700 text-gray-500 dark:text-gray-400 text-xs font-bold hover:bg-gray-50 dark:hover:bg-gray-900 transition-all flex items-center justify-center gap-2"
                                 >
-                                    {expandedCard === program.id ? 'Show Less ↑' : 'Show Curriculum ↓'}
+                                    {expandedCard === program.id ? (
+                                        <>Hide Details <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 15l7-7 7 7" /></svg></>
+                                    ) : (
+                                        <>See Curriculum & Projects <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" /></svg></>
+                                    )}
                                 </button>
 
                                 {/* Outcome */}
-                                <div className={`mt-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border-l-4 border-secondary`}>
-                                    <p className="text-sm text-gray-700 dark:text-gray-300">
-                                        <Link to={`/${program.slug}`} className="hover:text-secondary transition-colors">
-                                            <span className="font-bold text-primary dark:text-white">Goal:</span> {program.outcome}
-                                        </Link>
-                                    </p>
+                                <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-primary/5 to-secondary/5 dark:from-primary/20 dark:to-secondary/20 border-l-4 border-secondary group/goal">
+                                    <Link to={`/${program.slug}`} className="block">
+                                        <div className="flex items-center justify-between">
+                                            <div>
+                                                <span className="text-[10px] font-black text-secondary uppercase block mb-1">The Goal</span>
+                                                <p className="text-xs font-bold text-gray-800 dark:text-gray-200 leading-tight">
+                                                    {program.outcome}
+                                                </p>
+                                            </div>
+                                            <div className="w-8 h-8 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-sm group-hover/goal:translate-x-1 transition-transform">
+                                                <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </Link>
                                 </div>
 
                                 {/* CTA */}

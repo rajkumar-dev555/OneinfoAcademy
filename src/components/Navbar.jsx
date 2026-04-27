@@ -12,6 +12,7 @@ const Navbar = () => {
         { label: 'Home', href: '#home' },
         { label: 'About', href: '#about' },
         { label: 'Programs', href: '#programs' },
+        { label: 'Blog', href: '/blog' },
         { label: 'Testimonials', href: '#testimonials' },
         { label: 'Career Support', href: '#placement' },
         { label: 'Contact', href: '#contact' },
@@ -29,13 +30,23 @@ const Navbar = () => {
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navItems.map((item) => (
-                            <a
-                                key={item.label}
-                                href={item.href.startsWith('#') ? `/${item.href}` : item.href}
-                                className="text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-white font-medium transition-colors"
-                            >
-                                {item.label}
-                            </a>
+                            item.href.startsWith('#') ? (
+                                <a
+                                    key={item.label}
+                                    href={`/${item.href}`}
+                                    className="text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-white font-medium transition-colors"
+                                >
+                                    {item.label}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={item.label}
+                                    to={item.href}
+                                    className="text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-white font-medium transition-colors"
+                                >
+                                    {item.label}
+                                </Link>
+                            )
                         ))}
 
                         {/* Dark Mode Toggle */}
@@ -79,14 +90,25 @@ const Navbar = () => {
                 <div className="md:hidden bg-white dark:bg-dark shadow-lg">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {navItems.map((item) => (
-                            <a
-                                key={item.label}
-                                href={item.href.startsWith('#') ? `/${item.href}` : item.href}
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {item.label}
-                            </a>
+                            item.href.startsWith('#') ? (
+                                <a
+                                    key={item.label}
+                                    href={`/${item.href}`}
+                                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {item.label}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={item.label}
+                                    to={item.href}
+                                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {item.label}
+                                </Link>
+                            )
                         ))}
                         <button
                             onClick={() => {
