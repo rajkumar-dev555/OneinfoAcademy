@@ -1,0 +1,630 @@
+const defaultFaqs = (title) => [
+  {
+    question: `What is the duration of the ${title} course at OneInfo Academy Coimbatore?`,
+    answer: `Our ${title} program typically runs 3–4 months with flexible weekday and weekend batches. You get hands-on project work throughout the course.`,
+  },
+  {
+    question: 'Do you provide placement assistance?',
+    answer:
+      'Yes. We provide 100% placement support including resume building, LinkedIn optimization, mock interviews, and referrals to 100+ hiring partners across India.',
+  },
+  {
+    question: 'Is this course suitable for freshers?',
+    answer:
+      'Absolutely. Our industry-mentor model is designed for freshers and career switchers. We start from fundamentals and build up to production-ready project skills.',
+  },
+  {
+    question: 'Where is OneInfo Academy located in Coimbatore?',
+    answer:
+      'We are based in Coimbatore, Tamil Nadu — conveniently accessible from Saravanampatti, Peelamedu, Gandhipuram, and nearby engineering colleges.',
+  },
+];
+
+export const courses = [
+  {
+    id: 1,
+    slug: 'full-stack-development-course-coimbatore',
+    title: 'Full Stack Development',
+    subTitle: 'Become a high-paid Web Engineer in 90 days',
+    perfectFor: 'Freshers who want to build and deploy real apps',
+    icon: '💻',
+    duration: '3 months',
+    projects: ['E-commerce Platform', 'Social Media Dashboard', 'Real-time Chat App'],
+    careerPath: 'Software Developer, Frontend Engineer, Backend Specialist',
+    averageSalary: '4 - 12 LPA',
+    tools: ['React', 'Next.js', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Git', 'Docker'],
+    topics: [
+      'Frontend (React, Next.js)',
+      'Backend (Node.js, Express)',
+      'Database (MongoDB, SQL)',
+      'MERN stack development course',
+      'Full stack web development Coimbatore',
+      'Node.js certification',
+    ],
+    syllabus: [
+      { module: 'Web Fundamentals', topics: ['HTML5, CSS3, JavaScript ES6+', 'Responsive design with Tailwind CSS', 'Git version control'] },
+      { module: 'Frontend with React', topics: ['React components & hooks', 'State management', 'Next.js routing & SSR basics'] },
+      { module: 'Backend with Node.js', topics: ['REST API design', 'Express.js middleware', 'Authentication with JWT'] },
+      { module: 'Database & Deployment', topics: ['MongoDB & SQL queries', 'Cloud deployment', 'Portfolio project'] },
+    ],
+    description:
+      'Stop watching tutorials and start building. Our Full Stack Development course in Coimbatore is a project-first program. You won\'t just learn code; you\'ll build a professional portfolio that makes recruiters call you.',
+    detailedContent:
+      'This isn\'t a traditional classroom. It\'s a 3-month code-along journey. You\'ll start with modern UI design, master the React ecosystem, and build scalable backends with Node.js. By the time you graduate, you\'ll have 3 production-ready projects hosted on the cloud.',
+    outcome: 'Get job-ready with 3 live projects and 100% placement support.',
+    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'Full Stack Development Course in Coimbatore at Oneinfo Academy',
+    relatedCourses: ['python-training-in-coimbatore', 'java-full-stack-course-coimbatore'],
+    faqs: defaultFaqs('Full Stack Development'),
+  },
+  {
+    id: 2,
+    slug: 'ai-course-coimbatore',
+    title: 'Generative AI & LLM Engineering',
+    subTitle: 'The most "Future-Proof" skill of 2026',
+    perfectFor: 'Developers who don\'t want to be left behind by AI',
+    icon: '🤖',
+    duration: '2 months',
+    projects: ['Custom AI Chatbot', 'Content Generation Engine', 'AI-Powered Search (RAG)'],
+    careerPath: 'AI Engineer, Prompt Engineer, ML Specialist',
+    averageSalary: '6 - 18 LPA',
+    tools: ['Python', 'LangChain', 'OpenAI API', 'Hugging Face', 'Pinecone', 'FastAPI'],
+    topics: ['Python for AI & Automation', 'Machine Learning with Python', 'Generative AI course Coimbatore', 'Prompt Engineering training', 'AI Agentic workflows training'],
+    syllabus: [
+      { module: 'AI Foundations', topics: ['Python for AI', 'ML basics', 'Neural network concepts'] },
+      { module: 'LLM Engineering', topics: ['Prompt engineering', 'RAG pipelines', 'LangChain agents'] },
+      { module: 'Production AI', topics: ['API integration', 'Fine-tuning basics', 'AI deployment'] },
+    ],
+    description: 'AI isn\'t coming; it\'s here. Our Generative AI course in Coimbatore teaches you how to build, fine-tune, and deploy AI Agents using LangChain and OpenAI.',
+    detailedContent: 'Go beyond the hype. Learn the mechanics of LLMs, master Prompt Engineering, and build AI Agentic workflows that automate real business tasks.',
+    outcome: 'Build and deploy your own AI Agents and master LLM integration.',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'Generative AI and Machine Learning Course in Coimbatore at Oneinfo Academy',
+    relatedCourses: ['python-training-in-coimbatore', 'data-science-course-coimbatore'],
+    faqs: defaultFaqs('Generative AI & LLM Engineering'),
+  },
+  {
+    id: 5,
+    slug: 'cyber-security-course-coimbatore',
+    title: 'Cyber Security & Ethical Hacking',
+    subTitle: 'Become a Digital Bodyguard',
+    perfectFor: 'Learners who want to protect the digital world',
+    icon: '🛡️',
+    duration: '4 months',
+    metaTitle: 'Cyber Security Course in Coimbatore | Internship + Placement Support',
+    metaDescription:
+      'Join OneInfo Academy for Cyber Security Training in Coimbatore. Work on real projects, internship opportunities, certification preparation, and placement assistance.',
+    projects: ['Vulnerability Assessment Report', 'Network Intrusion Detection Lab', 'Secure Web Application Audit'],
+    careerPath: 'Security Analyst, Penetration Tester, Ethical Hacker, SOC Analyst',
+    averageSalary: '5 - 20 LPA',
+    tools: ['Wireshark', 'Metasploit', 'Burp Suite', 'Nmap', 'Kali Linux', 'Splunk', 'OWASP ZAP', 'Nessus'],
+    topics: [
+      'Ethical hacking course Coimbatore',
+      'Cybersecurity certification prep',
+      'Network security training',
+      'VAPT & penetration testing',
+      'Incident response & SOC operations',
+      'Cyber Security internship Coimbatore',
+    ],
+    syllabus: [
+      {
+        module: 'Module 1: Cyber Security Foundations',
+        topics: ['CIA triad & security principles', 'Threat landscape 2026', 'Security policies & compliance basics', 'Linux for security professionals'],
+      },
+      {
+        module: 'Module 2: Network Security',
+        topics: ['TCP/IP deep dive', 'Firewalls & IDS/IPS', 'VPN & secure communications', 'Wireless security auditing', 'Network traffic analysis with Wireshark'],
+      },
+      {
+        module: 'Module 3: Ethical Hacking & VAPT',
+        topics: ['Reconnaissance & footprinting', 'Scanning with Nmap', 'Exploitation with Metasploit', 'Web app testing with Burp Suite', 'OWASP Top 10 vulnerabilities'],
+      },
+      {
+        module: 'Module 4: Defensive Security & SOC',
+        topics: ['SIEM basics with Splunk', 'Incident response playbooks', 'Log analysis & forensics', 'Security hardening', 'DevSecOps introduction'],
+      },
+      {
+        module: 'Module 5: Career & Certification Prep',
+        topics: ['CEH & Security+ overview', 'Bug bounty methodology', 'Security portfolio building', 'Mock interviews & placement prep'],
+      },
+    ],
+    description:
+      'Looking for the best Cyber Security course in Coimbatore? OneInfo Academy delivers hands-on ethical hacking training with real lab environments, VAPT projects, and placement-oriented mentorship — not theory-heavy classroom lectures.',
+    detailedContent: `Cyber attacks cost Indian businesses over ₹1.25 lakh crore annually, and Coimbatore's growing IT corridor — from Saravanampatti to TIDEL Park — needs skilled defenders. Our Cyber Security training in Coimbatore is built for the 2026 job market where Security Analysts and Penetration Testers are among the most in-demand roles.
+
+Unlike generic IT institutes, OneInfo Academy follows an internship-style model. You won't just watch slides about hacking — you'll perform real vulnerability assessments, configure firewalls, analyze network packets, and conduct web application penetration tests in controlled lab environments.
+
+**Who should join this Cyber Security course?**
+- Engineering students and freshers targeting high-paying security roles (5–20 LPA)
+- IT professionals upskilling into DevSecOps or SOC analyst positions
+- Anyone searching for "Cyber Security training in Coimbatore" with placement support
+
+**What makes our program different?**
+Our trainer is an active DevSecOps professional with MNC experience. Every module maps to real job descriptions from companies hiring in Coimbatore and Bangalore. You'll build 3 portfolio projects including a full Vulnerability Assessment Report that you can present in interviews.
+
+**Career outcomes after completion:**
+Graduates target roles as Ethical Hackers, VAPT Consultants, Network Security Engineers, and SOC Analysts. With India's cybersecurity workforce gap exceeding 30%, certified professionals command premium salaries. Our Cyber Security internship track includes guided project work that simulates real corporate security audits.
+
+**Placement support included:**
+100% job assistance with resume optimization, LinkedIn branding, technical mock interviews, and referrals to 100+ hiring partners. We also guide you through certification pathways including CEH and CompTIA Security+. Explore our dedicated <a href="/cyber-security-placement-program">Cyber Security placement program</a> for outcome-focused details.
+
+**Training areas in Coimbatore:** Students join us from Saravanampatti, Gandhipuram, Singanallur, Peelamedu, and across Tamil Nadu — with flexible batches for college students and working professionals.`,
+    extendedSections: [
+      {
+        heading: 'Career Opportunities After Cyber Security Training',
+        body: 'Graduates pursue Ethical Hacker, VAPT Consultant, Network Security Engineer, SOC Analyst, Security Operations Engineer, and GRC Analyst roles. Coimbatore\'s IT corridor (Saravanampatti, CHIL SEZ) and national remote hiring both demand defenders who can demonstrate labs and reports — not slide decks. Our mentorship maps each module to real job descriptions from Naukri and LinkedIn postings in 2026.',
+      },
+      {
+        heading: 'Cyber Security Salary in India (2026)',
+        body: 'Entry-level Security Analysts: ₹4–8 LPA. Penetration Testers & VAPT roles: ₹8–15 LPA. Senior SOC leads and security architects: ₹15–25+ LPA. International roles (GCC, Singapore, UAE) often exceed ₹25 LPA equivalent for DevSecOps-adjacent profiles. Salaries rise fastest when you combine hands-on Burp/Metasploit portfolios with CEH or Security+ credentials.',
+      },
+      {
+        heading: 'Certifications We Prepare You For',
+        body: 'CEH (Certified Ethical Hacker), CompTIA Security+, OSCP foundations, and vendor-neutral SOC skills. We do not replace official exam prep — we align lab work so certification study feels practical. Many students sit CEH after completing our ethical hacking and VAPT modules.',
+      },
+      {
+        heading: 'Placement Process for Cyber Security Students',
+        body: '1) Build three portfolio projects including a Vulnerability Assessment Report. 2) Resume + LinkedIn tuned for "Cyber Security," "SOC," and "Ethical Hacking" keywords. 3) Technical mocks covering OWASP Top 10, Wireshark, and incident response. 4) Referrals to 100+ hiring partners. 5) Interview coordination until offer. See verified outcomes on our placement page.',
+      },
+      {
+        heading: 'Tools Covered (Hands-On Every Week)',
+        body: 'Kali Linux, Nmap, Metasploit, Burp Suite, Wireshark, OWASP ZAP, Nessus, Splunk, and secure Linux hardening. These match tools listed in 90%+ of Indian Cyber Security job posts. You will also learn basic Python/Bash scripting for automation — essential for SOC and pentest workflows.',
+      },
+      {
+        heading: 'Why Coimbatore Students Choose Cyber Security Now',
+        body: 'Local IT parks are expanding; every product team needs AppSec and cloud security skills. Compared to saturated generic IT training, Cyber Security offers higher salary ceilings and global remote options. OneInfo Academy\'s internship-style model fits Coimbatore students who want Saravanampatti-area employers plus Bangalore/Chennai remote roles — without relocating immediately.',
+      },
+      {
+        heading: 'Cyber Security Career Roadmap in Coimbatore (2026)',
+        body: 'Start as a Security Analyst (4–8 LPA), progress to Penetration Tester (8–15 LPA), and advance to Security Architect or CISO track (15–25+ LPA). Coimbatore companies in IT services, BFSI, and healthcare actively hire security professionals who can demonstrate hands-on VAPT skills — not just certificates.',
+      },
+      {
+        heading: 'Cyber Security Internship in Coimbatore',
+        body: 'Our internship-style training means you work on real security scenarios — not dummy labs. Students conduct vulnerability assessments on sample web applications, write professional security reports, and present findings just like a corporate security consultant would.',
+      },
+    ],
+    relatedBlogs: [
+      { slug: 'cyber-security-career-roadmap-2026', title: 'Cyber Security Career Roadmap 2026' },
+      { slug: 'soc-analyst-vs-ethical-hacker', title: 'SOC Analyst vs Ethical Hacker' },
+      { slug: 'cyber-security-salary-india-2026', title: 'Cyber Security Salary in India' },
+      { slug: 'cyber-security-interview-questions-2026', title: 'Cyber Security Interview Questions' },
+    ],
+    localAreaLinks: [
+      { slug: 'cyber-security-course-saravanampatti', label: 'Saravanampatti' },
+      { slug: 'cyber-security-course-gandhipuram', label: 'Gandhipuram' },
+      { slug: 'cyber-security-course-singanallur', label: 'Singanallur' },
+    ],
+    outcome: 'Master ethical hacking, VAPT, and network security — graduate with 3 security projects and placement support.',
+    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'Cyber Security and Ethical Hacking Training in Coimbatore at Oneinfo Academy',
+    relatedCourses: ['devops-course-coimbatore', 'aws-training-coimbatore'],
+    faqs: [
+      {
+        question: 'Which is the best Cyber Security course in Coimbatore for freshers?',
+        answer: 'OneInfo Academy\'s Cyber Security & Ethical Hacking program is designed specifically for freshers with no prior security experience. We start from Linux and networking basics and progress to hands-on VAPT labs with 100% placement support.',
+      },
+      {
+        question: 'Do you offer Cyber Security internship in Coimbatore?',
+        answer: 'Yes. Our program follows an internship-style model where students work on real security projects including vulnerability assessments, network audits, and web application penetration tests — building a portfolio that impresses recruiters.',
+      },
+      {
+        question: 'What is the salary after Cyber Security course in Coimbatore?',
+        answer: 'Entry-level Security Analysts earn 4–8 LPA, Penetration Testers earn 8–15 LPA, and experienced security professionals earn 15–25+ LPA. Our students target the 5–20 LPA range based on role and certification.',
+      },
+      {
+        question: 'What certifications does this course prepare me for?',
+        answer: 'We cover concepts aligned with CEH (Certified Ethical Hacker), CompTIA Security+, and OSCP foundations. Our trainer guides you on the best certification path based on your career goals.',
+      },
+      {
+        question: 'Is coding required for Cyber Security training?',
+        answer: 'Basic scripting (Python/Bash) helps but is not mandatory to start. We teach the necessary scripting as part of the curriculum. The focus is on practical security skills — network analysis, vulnerability testing, and incident response.',
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: 'devops-course-coimbatore',
+    title: 'DevOps & Cloud Engineering',
+    subTitle: 'The bridge between code and deployment',
+    perfectFor: 'Developers who want to manage high-scale systems',
+    icon: '☁️',
+    duration: '4 months',
+    metaTitle: 'DevOps Course in Coimbatore | DevOps Training for Freshers',
+    metaDescription:
+      'Best DevOps course in Coimbatore with Docker, Kubernetes, Jenkins, AWS & Azure. DevOps training for freshers with CI/CD projects, internship-style labs & 100% placement support at OneInfo Academy.',
+    projects: ['Automated CI/CD Pipeline', 'Kubernetes Cluster Setup', 'Multi-Cloud Infrastructure Deployment'],
+    careerPath: 'DevOps Engineer, Cloud Architect, Site Reliability Engineer',
+    averageSalary: '7 - 25 LPA',
+    tools: ['Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'Terraform', 'AWS', 'Azure', 'Ansible', 'Prometheus', 'Grafana'],
+    topics: [
+      'DevOps course Coimbatore',
+      'DevOps training for freshers',
+      'Docker and Kubernetes training',
+      'CI/CD pipeline automation',
+      'AWS solutions architect training',
+      'Microsoft Azure certification Coimbatore',
+      'Terraform & Infrastructure as Code',
+    ],
+    syllabus: [
+      {
+        module: 'Module 1: DevOps Foundations',
+        topics: ['DevOps culture & Agile', 'Linux administration', 'Git & GitHub workflows', 'Shell scripting for automation'],
+      },
+      {
+        module: 'Module 2: Containerization',
+        topics: ['Docker fundamentals', 'Docker Compose', 'Container networking', 'Docker registry & best practices'],
+      },
+      {
+        module: 'Module 3: Kubernetes & Orchestration',
+        topics: ['K8s architecture', 'Pods, Services, Deployments', 'Helm charts', 'K8s monitoring & troubleshooting'],
+      },
+      {
+        module: 'Module 4: CI/CD Pipelines',
+        topics: ['Jenkins pipeline as code', 'GitHub Actions workflows', 'Automated testing in CI/CD', 'Blue-green & canary deployments'],
+      },
+      {
+        module: 'Module 5: Cloud & IaC',
+        topics: ['AWS core services (EC2, S3, IAM)', 'Azure fundamentals', 'Terraform for IaC', 'Cloud cost optimization'],
+      },
+      {
+        module: 'Module 6: Monitoring & Career Prep',
+        topics: ['Prometheus & Grafana', 'Log management', 'DevOps interview prep', 'Certification roadmap (AWS, CKA)'],
+      },
+    ],
+    description:
+      'Searching for a DevOps course in Coimbatore? OneInfo Academy offers the most practical DevOps training for freshers — master Docker, Kubernetes, Jenkins, and cloud platforms with real CI/CD projects and placement support.',
+    detailedContent: `DevOps engineers are the highest-paid IT professionals in 2026, with salaries ranging from 7–25 LPA in India. Yet most "DevOps courses" in Coimbatore still teach outdated syllabus slides. At OneInfo Academy, DevOps means doing — you'll build automated pipelines, deploy containerized applications, and manage cloud infrastructure from day one.
+
+**Why DevOps training for freshers works here:**
+Our industry-mentor model means you learn from an active DevSecOps Lead who manages production systems at MNC scale. Small batch sizes (unlike crowded franchise classrooms) ensure 1-on-1 guidance. This is placement-oriented IT training Coimbatore students choose when they want results, not just certificates.
+
+**What you'll build:**
+1. **Automated CI/CD Pipeline** — Jenkins/GitHub Actions pipeline that builds, tests, and deploys a full-stack application
+2. **Kubernetes Cluster** — Production-style K8s deployment with monitoring and auto-scaling
+3. **Multi-Cloud Infrastructure** — Terraform-managed AWS/Azure resources with proper IAM and networking
+
+**DevOps Engineer salary in India (2026):**
+- Fresher DevOps Engineer: 5–8 LPA
+- Mid-level (2–4 years): 10–18 LPA
+- Senior DevOps/SRE/Cloud Architect: 18–25+ LPA
+Coimbatore's proximity to Bangalore and Chennai tech hubs means local DevOps talent is actively recruited by both startups and MNCs.
+
+**Who is this DevOps course for?**
+- Freshers with basic programming knowledge
+- Developers wanting to move into DevOps/Cloud roles
+- System administrators upskilling into automation
+- Anyone searching "DevOps training near me" in Coimbatore`,
+    extendedSections: [
+      {
+        heading: 'DevOps vs Traditional IT Roles',
+        body: 'Traditional sysadmins manage servers manually. DevOps engineers automate everything — infrastructure provisioning, testing, deployment, and monitoring. This course teaches you to think in pipelines, not tickets.',
+      },
+      {
+        heading: 'Cloud Platforms Covered',
+        body: 'We cover AWS (EC2, S3, IAM, Lambda, RDS) and Azure fundamentals. For deep AWS specialization, see our dedicated AWS Training in Coimbatore page. For broad cloud concepts, see our Cloud Computing Course.',
+      },
+      {
+        heading: 'DevOps Training for Freshers — No Experience Needed',
+        body: 'If you know basic Linux commands and have touched any programming language, you can start. We build from fundamentals to production-grade DevOps skills in 4 months with 3 portfolio projects.',
+      },
+    ],
+    outcome: 'Become a certified Cloud/DevOps expert — build 3 production projects and get placement support.',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'DevOps and Cloud Engineering Course in Coimbatore at Oneinfo Academy',
+    relatedCourses: ['aws-training-coimbatore', 'cloud-computing-course-coimbatore', 'cyber-security-course-coimbatore'],
+    faqs: [
+      {
+        question: 'Which is the best DevOps course in Coimbatore for freshers?',
+        answer: 'OneInfo Academy\'s DevOps & Cloud Engineering program is specifically designed for freshers. We start from Linux and Git basics, progress through Docker and Kubernetes, and finish with production CI/CD projects — all with 100% placement support.',
+      },
+      {
+        question: 'What is the DevOps engineer salary in India after this course?',
+        answer: 'Freshers typically start at 5–8 LPA, mid-level DevOps engineers earn 10–18 LPA, and senior SRE/Cloud Architects earn 18–25+ LPA. Our course targets the 7–25 LPA range based on experience and certifications.',
+      },
+      {
+        question: 'Do I need coding experience for DevOps training?',
+        answer: 'Basic programming knowledge (any language) and familiarity with Linux helps but is not mandatory. We teach shell scripting, YAML, and pipeline configuration as part of the curriculum.',
+      },
+      {
+        question: 'What tools are covered in this DevOps course?',
+        answer: 'Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, Ansible, AWS, Azure, Prometheus, and Grafana — the exact stack listed in 85% of DevOps job postings in India.',
+      },
+      {
+        question: 'How is this different from the AWS training course?',
+        answer: 'This DevOps course covers the full pipeline — containers, CI/CD, orchestration, and multi-cloud. Our dedicated AWS Training course goes deeper into AWS services and Solutions Architect certification prep.',
+      },
+    ],
+  },
+  {
+    id: 12,
+    slug: 'aws-training-coimbatore',
+    title: 'AWS Solutions Architect Training',
+    subTitle: 'Master Amazon Web Services from zero to certified',
+    perfectFor: 'Cloud aspirants targeting AWS certification and architect roles',
+    icon: '🔶',
+    duration: '3 months',
+    metaTitle: 'AWS Training in Coimbatore | AWS Solutions Architect Course',
+    metaDescription:
+      'Best AWS training in Coimbatore. Learn EC2, S3, IAM, Lambda, RDS & Solutions Architect certification prep with hands-on labs, real projects & placement support at OneInfo Academy.',
+    projects: ['Scalable Web App on AWS', 'Serverless API with Lambda', 'Multi-tier AWS Architecture Design'],
+    careerPath: 'AWS Solutions Architect, Cloud Engineer, DevOps Engineer',
+    averageSalary: '6 - 22 LPA',
+    tools: ['AWS EC2', 'AWS S3', 'AWS IAM', 'AWS Lambda', 'AWS RDS', 'AWS VPC', 'CloudFormation', 'AWS CloudWatch'],
+    topics: [
+      'AWS training in Coimbatore',
+      'AWS Solutions Architect course',
+      'AWS certification prep Coimbatore',
+      'Cloud infrastructure design',
+      'Serverless computing with Lambda',
+    ],
+    syllabus: [
+      { module: 'AWS Cloud Foundations', topics: ['Cloud computing concepts', 'AWS global infrastructure', 'IAM & security best practices', 'AWS Free Tier setup'] },
+      { module: 'Compute & Storage', topics: ['EC2 instances & auto-scaling', 'EBS & S3 storage', 'AMI management', 'Load balancing with ELB'] },
+      { module: 'Networking & Security', topics: ['VPC design', 'Security groups & NACLs', 'Route 53 DNS', 'AWS WAF basics'] },
+      { module: 'Serverless & Databases', topics: ['Lambda functions', 'API Gateway', 'RDS & DynamoDB', 'ElastiCache'] },
+      { module: 'Certification & Projects', topics: ['Solutions Architect exam prep', 'Well-Architected Framework', 'Cost optimization', 'Capstone architecture project'] },
+    ],
+    description:
+      'Looking for AWS training in Coimbatore? OneInfo Academy\'s AWS Solutions Architect course covers EC2, S3, IAM, Lambda, RDS, and certification prep with hands-on labs and real cloud projects.',
+    detailedContent: `Amazon Web Services dominates 32% of the global cloud market, and AWS-certified professionals are among the highest-paid in IT. Our AWS training in Coimbatore is designed for students and professionals who want to design, deploy, and manage scalable cloud infrastructure.
+
+You'll work directly in the AWS console — launching EC2 instances, configuring S3 buckets, building serverless APIs with Lambda, and designing multi-tier architectures. Every lab mirrors real-world scenarios that AWS Solutions Architects face daily.
+
+For the complete DevOps pipeline (Docker, Kubernetes, CI/CD), see our DevOps Course in Coimbatore. For broader cloud concepts including Azure, see our Cloud Computing Course.`,
+    extendedSections: [
+      {
+        heading: 'AWS Certification Path',
+        body: 'We prepare you for AWS Certified Solutions Architect – Associate (SAA-C03). Our curriculum maps directly to exam domains: design secure architectures, design resilient architectures, design high-performing architectures, and design cost-optimized architectures.',
+      },
+      {
+        heading: 'AWS Career Opportunities in Coimbatore',
+        body: 'Coimbatore IT companies and remote-first startups actively hire AWS Cloud Engineers. With AWS skills, you can target roles locally or work remotely for Bangalore/Chennai-based companies paying 8–22 LPA.',
+      },
+    ],
+    outcome: 'Design and deploy production AWS architectures — certification-ready with 3 cloud projects.',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'AWS Solutions Architect Training in Coimbatore at OneInfo Academy',
+    relatedCourses: ['cloud-computing-course-coimbatore', 'devops-course-coimbatore'],
+    faqs: defaultFaqs('AWS Solutions Architect Training'),
+  },
+  {
+    id: 13,
+    slug: 'cloud-computing-course-coimbatore',
+    title: 'Cloud Computing Course',
+    subTitle: 'AWS, Azure & cloud career foundations',
+    perfectFor: 'Beginners entering the cloud computing career path',
+    icon: '🌐',
+    duration: '3 months',
+    metaTitle: 'Cloud Computing Course in Coimbatore | Cloud Training Near Me',
+    metaDescription:
+      'Best Cloud Computing course in Coimbatore. Learn AWS, Azure, cloud architecture & deployment with hands-on projects, internship-style training & placement support at OneInfo Academy.',
+    projects: ['Multi-Cloud Deployment Project', 'Cloud Migration Simulation', 'Cloud Cost Optimization Dashboard'],
+    careerPath: 'Cloud Engineer, Cloud Administrator, Solutions Architect',
+    averageSalary: '5 - 18 LPA',
+    tools: ['AWS', 'Microsoft Azure', 'Docker', 'Terraform', 'CloudWatch', 'Azure DevOps'],
+    topics: [
+      'Cloud computing course Coimbatore',
+      'Cloud training near me',
+      'AWS and Azure fundamentals',
+      'Cloud architecture design',
+      'Cloud security basics',
+    ],
+    syllabus: [
+      { module: 'Cloud Computing Fundamentals', topics: ['IaaS, PaaS, SaaS models', 'Cloud deployment models', 'Shared responsibility model', 'Cloud economics'] },
+      { module: 'AWS Essentials', topics: ['EC2, S3, IAM overview', 'VPC networking', 'Serverless introduction'] },
+      { module: 'Microsoft Azure Essentials', topics: ['Azure VMs & storage', 'Azure Active Directory', 'Azure networking', 'Azure certification overview'] },
+      { module: 'Cloud Operations', topics: ['Monitoring & logging', 'Backup & disaster recovery', 'Cloud security fundamentals', 'Cost management'] },
+      { module: 'Career & Projects', topics: ['Cloud career roadmap', 'Multi-cloud project', 'Interview preparation'] },
+    ],
+    description:
+      'Searching for a Cloud Computing course in Coimbatore or "cloud training near me"? OneInfo Academy covers AWS and Azure fundamentals with hands-on projects — the perfect starting point for your cloud career.',
+    detailedContent: `Cloud computing is the foundation of modern IT. Every company — from Coimbatore startups to global MNCs — runs on cloud infrastructure. This Cloud Computing course in Coimbatore gives you a vendor-neutral foundation plus hands-on experience with both AWS and Microsoft Azure.
+
+Whether you're a fresher exploring cloud careers or an IT professional transitioning from traditional infrastructure, this course provides the breadth you need before specializing. For deep AWS training, see our AWS Solutions Architect course. For automation and CI/CD, see our DevOps course.`,
+    extendedSections: [
+      {
+        heading: 'Cloud Computing Career Guide',
+        body: 'Start as Cloud Administrator (4–7 LPA), progress to Cloud Engineer (7–12 LPA), and advance to Solutions Architect (12–18+ LPA). Cloud skills combined with DevOps or Security expertise command the highest premiums.',
+      },
+      {
+        heading: 'AWS vs Azure — Which Should You Learn?',
+        body: 'We cover both platforms so you can make an informed choice. AWS leads in market share and startup adoption; Azure dominates enterprise and Microsoft-ecosystem companies. Most Coimbatore employers value either certification.',
+      },
+    ],
+    outcome: 'Understand cloud architecture across AWS and Azure — ready to specialize or certify.',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'Cloud Computing Course in Coimbatore at OneInfo Academy',
+    relatedCourses: ['aws-training-coimbatore', 'devops-course-coimbatore'],
+    faqs: defaultFaqs('Cloud Computing'),
+  },
+  {
+    id: 3,
+    slug: 'java-full-stack-course-coimbatore',
+    title: 'Java Enterprise Stack',
+    subTitle: 'Build secure, massive systems for top MNCs',
+    perfectFor: 'Students aiming for Tier-1 Corporate roles',
+    icon: '☕',
+    duration: '4 months',
+    projects: ['Banking Management System', 'Enterprise HR Portal', 'Microservices Booking App'],
+    careerPath: 'Java Developer, Systems Architect, Enterprise Lead',
+    averageSalary: '5 - 15 LPA',
+    tools: ['Java', 'Spring Boot', 'Hibernate', 'MySQL', 'Angular', 'Maven', 'Docker'],
+    topics: ['Core Java and J2EE training', 'Spring Boot & Hibernate coaching', 'Microservices Architecture', 'Angular/React Integration', 'Oracle/MySQL Database'],
+    syllabus: [
+      { module: 'Core Java', topics: ['OOP concepts', 'Collections & streams', 'Exception handling', 'Multithreading'] },
+      { module: 'Spring Ecosystem', topics: ['Spring Boot REST APIs', 'Hibernate ORM', 'Spring Security', 'Microservices'] },
+      { module: 'Frontend & Deployment', topics: ['Angular basics', 'API integration', 'Docker deployment'] },
+    ],
+    description: 'Big companies run on Java. Our Java full stack course in Coimbatore prepares you for the high-stability world of enterprise tech.',
+    detailedContent: 'Learn how to build systems that handle millions of users. We focus on security, scalability, and Microservices — the backbone of modern corporate IT.',
+    outcome: 'Master Enterprise-grade Java and secure high-paying MNC roles.',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'Java Full Stack Training in Coimbatore at Oneinfo Academy',
+    relatedCourses: ['full-stack-development-course-coimbatore'],
+    faqs: defaultFaqs('Java Enterprise Stack'),
+  },
+  {
+    id: 4,
+    slug: 'python-training-in-coimbatore',
+    title: 'Python & Automation',
+    subTitle: 'The fastest way to start your tech career',
+    perfectFor: 'Beginners who want to learn fast and earn early',
+    icon: '🐍',
+    duration: '2 months',
+    projects: ['Web Scraper Tool', 'File Automation Bot', 'Personal Portfolio Site'],
+    careerPath: 'Automation Engineer, Backend Developer, Python Pro',
+    averageSalary: '4 - 9 LPA',
+    tools: ['Python', 'Django', 'Flask', 'Selenium', 'Pandas', 'Git'],
+    topics: ['Python for automation', 'Data Analysis with Python', 'Python full stack developer course', 'Django & Flask Frameworks', 'Scripting & Web Scraping'],
+    syllabus: [
+      { module: 'Python Basics', topics: ['Syntax & data types', 'Functions & OOP', 'File handling', 'Error handling'] },
+      { module: 'Web Development', topics: ['Django/Flask', 'REST APIs', 'Database integration'] },
+      { module: 'Automation', topics: ['Web scraping', 'Task automation', 'Testing with Selenium'] },
+    ],
+    description: 'Python is simple to learn but powerful to use. Our Python training in Coimbatore is designed for absolute beginners.',
+    detailedContent: 'From the first line of code to deploying a full web app, we guide you every step. You\'ll master Django, Flask, and automation scripting.',
+    outcome: 'Master Python for automation and web development in 8 weeks.',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'Python Training and Full Stack Course in Coimbatore at Oneinfo Academy',
+    relatedCourses: ['data-science-course-coimbatore', 'ai-course-coimbatore'],
+    faqs: defaultFaqs('Python & Automation'),
+  },
+  {
+    id: 7,
+    slug: 'data-science-course-coimbatore',
+    title: 'Data Science & Analytics',
+    subTitle: 'Turn "Numbers" into "Decisions"',
+    perfectFor: 'Problem solvers who love data and trends',
+    icon: '📊',
+    duration: '3 months',
+    projects: ['Sales Prediction Model', 'Customer Segmentation', 'Interactive Data Dashboard'],
+    careerPath: 'Data Scientist, Data Analyst, Business Intelligence Lead',
+    averageSalary: '6 - 20 LPA',
+    tools: ['Python', 'Pandas', 'Scikit-learn', 'Power BI', 'Tableau', 'SQL'],
+    topics: ['Data Science certification Coimbatore', 'Data Analytics with Power BI/Tableau', 'Big Data Hadoop coaching', 'Python for Data Science', 'Predictive Modeling'],
+    syllabus: [
+      { module: 'Data Foundations', topics: ['Statistics basics', 'Python for data', 'SQL queries', 'Data cleaning'] },
+      { module: 'Machine Learning', topics: ['Supervised learning', 'Unsupervised learning', 'Model evaluation'] },
+      { module: 'Visualization & BI', topics: ['Power BI dashboards', 'Tableau reports', 'Storytelling with data'] },
+    ],
+    description: 'Data is the new oil. Our Data Science certification in Coimbatore teaches you how to refine it.',
+    detailedContent: 'Master Python for Data Science, build predictive models, and understand Big Data with Hadoop.',
+    outcome: 'Predict the future using data and dashboards.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'Data Science and Analytics Course in Coimbatore at Oneinfo Academy',
+    relatedCourses: ['python-training-in-coimbatore', 'ai-course-coimbatore'],
+    faqs: defaultFaqs('Data Science & Analytics'),
+  },
+  {
+    id: 8,
+    slug: 'mobile-app-development-coimbatore',
+    title: 'Mobile App Development',
+    subTitle: 'Build the next million-dollar app',
+    perfectFor: 'Creatives who want to build for the palm of the hand',
+    icon: '📱',
+    duration: '3 months',
+    projects: ['Food Delivery App', 'Fitness Tracker', 'E-learning Mobile Platform'],
+    careerPath: 'Mobile App Developer, Flutter Engineer, iOS/Android Lead',
+    averageSalary: '4 - 15 LPA',
+    tools: ['Flutter', 'React Native', 'Dart', 'Firebase', 'Android Studio'],
+    topics: ['Flutter development training Coimbatore', 'React Native course', 'Android app development Coimbatore', 'iOS (Swift) training center', 'Cross-platform strategies'],
+    syllabus: [
+      { module: 'Mobile Fundamentals', topics: ['UI/UX for mobile', 'Dart/JavaScript basics', 'Widget architecture'] },
+      { module: 'App Development', topics: ['Flutter/React Native', 'State management', 'API integration'] },
+      { module: 'Publishing', topics: ['Play Store deployment', 'App testing', 'Performance optimization'] },
+    ],
+    description: 'Everyone has a phone. Every business needs an app. Our Mobile app development course in Coimbatore gives you the power to build them.',
+    detailedContent: 'Choose your path: Native Android or iOS, or the high-demand cross-platform Flutter.',
+    outcome: 'Build and publish your first professional app in 3 months.',
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'Mobile App Development (Flutter, React Native, Android) in Coimbatore',
+    relatedCourses: ['ui-ux-design-training-coimbatore'],
+    faqs: defaultFaqs('Mobile App Development'),
+  },
+  {
+    id: 9,
+    slug: 'ui-ux-design-training-coimbatore',
+    title: 'UI/UX Design Masterclass',
+    subTitle: 'Design digital experiences people love',
+    perfectFor: 'Creative minds who love design and psychology',
+    icon: '🎨',
+    duration: '2 months',
+    projects: ['SaaS Product Design', 'Mobile App High-Fi Prototype', 'UX Case Study'],
+    careerPath: 'UI/UX Designer, Product Designer, Interaction Expert',
+    averageSalary: '4 - 10 LPA',
+    tools: ['Figma', 'Adobe XD', 'Miro', 'Protopie'],
+    topics: ['UI/UX design course Coimbatore', 'Figma and Adobe XD training', 'Design Thinking Process', 'User Research Principles', 'Prototyping & Wireframing'],
+    syllabus: [
+      { module: 'Design Thinking', topics: ['User research', 'Personas & journey maps', 'Wireframing'] },
+      { module: 'Visual Design', topics: ['Figma mastery', 'Design systems', 'Responsive design'] },
+      { module: 'Portfolio', topics: ['Case study creation', 'Usability testing', 'Design presentation'] },
+    ],
+    description: 'Design is how it works, not just how it looks. Our UI/UX design course in Coimbatore teaches you the "Why" behind great apps.',
+    detailedContent: 'From user research to wireframing and interactive prototyping, you will learn the full product design cycle.',
+    outcome: 'Build a creative design portfolio and start your design career.',
+    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'UI/UX Design Training (Figma, Adobe XD) in Coimbatore at Oneinfo Academy',
+    relatedCourses: ['mobile-app-development-coimbatore'],
+    faqs: defaultFaqs('UI/UX Design'),
+  },
+  {
+    id: 10,
+    slug: 'software-testing-training-coimbatore',
+    title: 'QA & Automation Testing',
+    subTitle: 'The "Gatekeeper" of high-quality software',
+    perfectFor: 'Meticulous learners who value quality and precision',
+    icon: '🧪',
+    duration: '2 months',
+    projects: ['Automation Test Suite', 'API Performance Report', 'Bug Audit Case Study'],
+    careerPath: 'QA Automation Engineer, SDET, Quality Analyst',
+    averageSalary: '4 - 12 LPA',
+    tools: ['Selenium', 'Playwright', 'JMeter', 'Postman', 'TestNG', 'Cypress'],
+    topics: ['Software testing training in Coimbatore', 'Selenium automation testing', 'Playwright automation training', 'Manual testing course', 'API & Database Testing'],
+    syllabus: [
+      { module: 'Testing Fundamentals', topics: ['SDLC & STLC', 'Test case design', 'Bug reporting'] },
+      { module: 'Automation', topics: ['Selenium WebDriver', 'Playwright', 'Page Object Model'] },
+      { module: 'Advanced Testing', topics: ['API testing with Postman', 'Performance testing', 'CI/CD integration'] },
+    ],
+    description: 'Software needs to be bug-free. Our Software testing training covers both manual and advanced Selenium automation testing.',
+    detailedContent: 'Master the art of breaking and fixing software. You will learn test case design, automation scripts, and performance testing.',
+    outcome: 'Become a job-ready QA Automation Engineer with placement support.',
+    image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'Software Testing (Selenium, Playwright, Manual) Course in Coimbatore',
+    relatedCourses: ['full-stack-development-course-coimbatore'],
+    faqs: defaultFaqs('QA & Automation Testing'),
+  },
+  {
+    id: 11,
+    slug: 'ai-first-web-design-workshop-coimbatore',
+    title: 'AI-First Web Design Workshop',
+    subTitle: 'Build professional websites 10x faster with AI',
+    perfectFor: 'Beginners & Entrepreneurs who want to launch fast',
+    icon: '🚀',
+    duration: '5 days',
+    projects: ['Personal Portfolio Website', 'Business Landing Page', 'AI-Generated Component Library'],
+    careerPath: 'AI-Assisted Developer, Freelance Web Designer, Product Maker',
+    averageSalary: 'Highly in-demand Freelance Skill',
+    tools: ['Cursor AI', 'ChatGPT', 'Claude', 'GitHub Copilot', 'VS Code'],
+    topics: ['Prompt Engineering for Web Dev', 'AI-Assisted HTML/CSS Generation', 'Claude & ChatGPT for Coding', 'Cursor AI & Copilot Mastery', 'V.A.B. (Verify, Adapt, Build) Method', 'One-Click Cloud Deployment'],
+    syllabus: [
+      { module: 'AI Coding Foundations', topics: ['Prompt engineering', 'V.A.B. methodology', 'AI tool setup'] },
+      { module: 'Build with AI', topics: ['HTML/CSS generation', 'JavaScript with AI', 'Responsive design'] },
+      { module: 'Deploy & Launch', topics: ['Cloud deployment', 'Portfolio polish', 'Freelance readiness'] },
+    ],
+    description: 'Why spend months learning to code when you can build professional websites in days? Our 5-day AI-First Web Design Workshop in Coimbatore teaches you how to use AI as your primary coding partner.',
+    detailedContent: 'This is an intensive, 5-day hands-on experience. You will master Cursor AI and VS Code to write code with AI assistance while understanding the underlying HTML, CSS, and JavaScript.',
+    outcome: 'Launch your professional portfolio in 5 days using the power of AI.',
+    image: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    alt: 'AI-Powered Web Development Workshop in Coimbatore at Oneinfo Academy',
+    relatedCourses: ['full-stack-development-course-coimbatore', 'ai-course-coimbatore'],
+    faqs: defaultFaqs('AI-First Web Design Workshop'),
+  },
+];
+
+export function getCourseBySlug(slug) {
+  return courses.find((c) => c.slug === slug);
+}
+
+export function getRelatedCourses(slugs = []) {
+  return slugs.map((s) => getCourseBySlug(s)).filter(Boolean);
+}

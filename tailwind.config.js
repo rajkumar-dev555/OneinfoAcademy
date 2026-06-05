@@ -1,22 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './app/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: '#1d293e', // Logo Navy
-        secondary: '#f39200', // Logo Orange
-        accent: '#f39200', // Use orange as accent too
+        primary: '#1d293e',
+        'primary-dark': '#141e2d',
+        secondary: '#f39200',
+        accent: '#f39200',
         dark: '#0f172a',
         light: '#f8fafc',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Outfit', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        heading: ['var(--font-outfit)', 'Outfit', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out forwards',
@@ -36,4 +37,4 @@ export default {
     },
   },
   plugins: [],
-}
+};
